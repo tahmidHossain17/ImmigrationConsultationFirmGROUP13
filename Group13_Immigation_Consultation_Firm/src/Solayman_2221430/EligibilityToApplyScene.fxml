@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.EligibilityToApplySceneController">
+   <children>
+      <Label layoutX="48.0" layoutY="48.0" prefHeight="39.0" prefWidth="105.0" text="Country" />
+      <RadioButton fx:id="maleRadioButton" layoutX="350.0" layoutY="59.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="femaleRadioButton" layoutX="463.0" layoutY="59.0" mnemonicParsing="false" text="Female" />
+      <Label layoutX="41.0" layoutY="98.0" prefHeight="39.0" prefWidth="105.0" text="Visa Applying for:" />
+      <Label layoutX="41.0" layoutY="154.0" prefHeight="25.0" prefWidth="59.0" text="IELTS:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="197.0" prefHeight="32.0" prefWidth="75.0" text="Education:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="countryComboBox" layoutX="164.0" layoutY="55.0" prefWidth="150.0" />
+      <ComboBox fx:id="visaApplyingForComboBox" layoutX="164.0" layoutY="105.0" prefWidth="150.0" />
+      <Label layoutX="224.0" layoutY="154.0" prefHeight="25.0" prefWidth="40.0" text="SAT: ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="404.0" layoutY="154.0" prefHeight="25.0" prefWidth="48.0" text="GRE:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="ieltsComboBox" layoutX="89.0" layoutY="154.0" prefHeight="25.0" prefWidth="75.0" />
+      <ComboBox fx:id="greComboBox" layoutX="455.0" layoutY="154.0" prefHeight="25.0" prefWidth="75.0" />
+      <ComboBox fx:id="satComboBox" layoutX="270.0" layoutY="154.0" prefHeight="25.0" prefWidth="75.0" />
+      <ComboBox fx:id="educationComboBox" layoutX="123.0" layoutY="201.0" prefHeight="25.0" prefWidth="116.0" />
+      <Label layoutX="51.0" layoutY="244.0" prefHeight="32.0" prefWidth="59.0" text="Skills:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="skillsComboBox" layoutX="126.0" layoutY="248.0" prefHeight="25.0" prefWidth="116.0" />
+      <Button layoutX="476.0" layoutY="326.0" mnemonicParsing="false" onAction="#checkButtonOnMouseClick" prefHeight="54.0" prefWidth="75.0" text="Check">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="52.0" layoutY="341.0" mnemonicParsing="false" onAction="#backToDashBoardOnMouseClicked" prefHeight="32.0" prefWidth="116.0" text="Back to Dashboard" />
+      <CheckBox layoutX="362.0" layoutY="97.0" mnemonicParsing="false" text="Student " />
+   </children>
+</AnchorPane>

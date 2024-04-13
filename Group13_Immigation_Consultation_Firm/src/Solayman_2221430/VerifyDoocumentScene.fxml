@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.VerifyDoocumentSceneController">
+   <children>
+      <Label layoutX="122.0" layoutY="38.0" prefHeight="36.0" prefWidth="108.0" text="Enter Passport no :" />
+      <TextField fx:id="enterPassportNoTextField" layoutX="237.0" layoutY="43.0" />
+      <Button layoutX="230.0" layoutY="95.0" mnemonicParsing="false" onAction="#viewDetailsButtonOnMouseClick" text="View Details" />
+      <Label layoutX="21.0" layoutY="143.0" prefHeight="25.0" prefWidth="108.0" text="Passport No :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="175.0" prefHeight="25.0" prefWidth="62.0" text="Name :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="208.0" prefHeight="25.0" prefWidth="108.0" text="Date of Birth :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="240.0" prefHeight="25.0" prefWidth="72.0" text="Gender :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="271.0" prefHeight="25.0" prefWidth="93.0" text="Nationality :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="passportNoLabel" layoutX="132.0" layoutY="143.0" prefHeight="25.0" prefWidth="197.0" />
+      <Label fx:id="nameLabel" layoutX="132.0" layoutY="175.0" prefHeight="25.0" prefWidth="197.0" />
+      <Label fx:id="dobLabel" layoutX="132.0" layoutY="208.0" prefHeight="25.0" prefWidth="197.0" />
+      <Label fx:id="genderLabel" layoutX="132.0" layoutY="240.0" prefHeight="25.0" prefWidth="197.0" />
+      <Label fx:id="nationalityLabel" layoutX="132.0" layoutY="271.0" prefHeight="25.0" prefWidth="197.0" />
+      <Label fx:id="notMatchesLabel" layoutX="34.0" layoutY="321.0" prefHeight="36.0" prefWidth="530.0" />
+   </children>
+</AnchorPane>
