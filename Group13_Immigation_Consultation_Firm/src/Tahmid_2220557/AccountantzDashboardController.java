@@ -31,7 +31,18 @@ public class AccountantzDashboardController implements Initializable {
         // TODO
     }    
     @FXML
-    private void logoutbuttononclick(ActionEvent event) {
+    private void logoutbuttononclick(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainPKG/Login.fxml"));
+        Parent parent = fxmlLoader.load();
+
+        // Retrieve preferred height and width from the loaded parent node
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+        stage.setTitle("login");
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();  
     }
 
     @FXML

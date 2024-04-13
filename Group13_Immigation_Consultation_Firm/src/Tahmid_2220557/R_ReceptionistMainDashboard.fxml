@@ -22,37 +22,37 @@
                   </Label>
                   <VBox layoutX="14.0" layoutY="67.0" prefHeight="513.0" prefWidth="244.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#clientPaymentStatusOnClick" prefHeight="72.0" prefWidth="205.0" textFill="#321515">
+                        <Button mnemonicParsing="false" onAction="#clientProfileViewOnMouseClick" prefHeight="72.0" prefWidth="205.0" text="Client Profile" textFill="#321515">
                            <font>
                               <Font name="Century Schoolbook" size="18.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#generateIncomeStatement" prefHeight="63.0" prefWidth="205.0" text="Income Statement" textFill="#321515">
+                        <Button mnemonicParsing="false" onAction="#fillupClientProfileOnMouseClick" prefHeight="63.0" prefWidth="205.0" text="Update Client" textFill="#321515">
                            <font>
                               <Font name="Century Schoolbook" size="18.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#generateBalancesheet" prefHeight="69.0" prefWidth="205.0" text="Balance Sheet" textFill="#321515">
+                        <Button mnemonicParsing="false" onAction="#TermsAndPolicyOnMouseClick" prefHeight="69.0" prefWidth="205.0" text="Terms And Policy" textFill="#321515">
                            <font>
                               <Font name="Century Schoolbook" size="18.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#payrollprocessing" prefHeight="60.0" prefWidth="205.0" text="Payroll Process" textFill="#321515">
+                        <Button mnemonicParsing="false" onAction="#appointmentScheduleRecordOnMouseClick" prefHeight="60.0" prefWidth="205.0" text="Appointment Schedule" textFill="#321515">
                            <font>
                               <Font name="Century Schoolbook" size="18.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#allowanceRequestOnClick" prefHeight="59.0" prefWidth="205.0" text="Allowance Request" textFill="#321515">
+                        <Button mnemonicParsing="false" onAction="#generatePaySlipOnMouseClick" prefHeight="59.0" prefWidth="205.0" text="Generate PaySlip" textFill="#321515">
                            <font>
                               <Font name="Century Schoolbook" size="18.0" />
                            </font>
                         </Button>
-                        <Button layoutX="10.0" layoutY="214.0" mnemonicParsing="false" onAction="#opExOnClick" prefHeight="60.0" prefWidth="205.0" text="Operational Expenditure" textFill="#321515">
+                        <Button layoutX="10.0" layoutY="214.0" mnemonicParsing="false" onAction="#CheckEligibilityOnMouseClick" prefHeight="60.0" prefWidth="205.0" text="Eligibility Check" textFill="#321515">
                            <font>
                               <Font name="Century Schoolbook" size="18.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#yearlyFinancialReportOnClick" prefHeight="57.0" prefWidth="205.0" text="Yearly Report">
+                        <Button mnemonicParsing="false" onAction="#attendenceAndHoursOnMouseClick" prefHeight="57.0" prefWidth="205.0" text="Attendence and Hours">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -73,7 +73,7 @@
         <tabs>
           <Tab text="Notifications">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #A9A9A9;" />
             </content>
           </Tab>
           <Tab text="Extras">
