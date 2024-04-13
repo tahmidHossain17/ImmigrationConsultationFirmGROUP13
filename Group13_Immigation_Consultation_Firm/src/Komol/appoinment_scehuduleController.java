@@ -10,23 +10,19 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 
 /**
  * FXML Controller class
  *
  * @author Komol
  */
-public class User_06_ComplainITController implements Initializable {
+public class appoinment_scehuduleController implements Initializable {
 
     @FXML
-    private TextField Consultantnametextfield;
+    private ComboBox<?> combobox;
     @FXML
-    private ComboBox<?> complaintypecombobox;
-    @FXML
-    private TextField detailtextfield;
-    @FXML
-    private TextField dateofbirthtextfield;
+    private TextArea textarea;
 
     /**
      * Initializes the controller class.
@@ -37,15 +33,11 @@ public class User_06_ComplainITController implements Initializable {
     }    
 
     @FXML
-    private void sendbuttononclick(ActionEvent event) {
+    private void loadbuttononclick(ActionEvent event) {
     }
 
     @FXML
-    private void logoutbuttononclick(ActionEvent event) {
-    }
-
-    @FXML
-    private void downloadbuttononclick(ActionEvent event) {
+    private void logoutbuttonclick(ActionEvent event) {
     }
     
 }

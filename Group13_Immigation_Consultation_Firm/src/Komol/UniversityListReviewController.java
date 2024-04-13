@@ -9,7 +9,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 
 /**
@@ -17,16 +17,26 @@ import javafx.scene.control.TextField;
  *
  * @author Komol
  */
-public class User_06_ComplainITController implements Initializable {
+public class UniversityListReviewController implements Initializable {
 
     @FXML
-    private TextField Consultantnametextfield;
+    private TextField universitynametextfield;
     @FXML
-    private ComboBox<?> complaintypecombobox;
+    private TextField countrynametextfield;
     @FXML
-    private TextField detailtextfield;
+    private TextField IELTSontextfield;
     @FXML
-    private TextField dateofbirthtextfield;
+    private TextField greTextField;
+    @FXML
+    private TextField Acceptanceratetextfield;
+    @FXML
+    private RadioButton USAradiobutton;
+    @FXML
+    private RadioButton Australiaradiobutton;
+    @FXML
+    private RadioButton ukradiobutton;
+    @FXML
+    private RadioButton canadaradiobutton;
 
     /**
      * Initializes the controller class.
@@ -37,15 +47,11 @@ public class User_06_ComplainITController implements Initializable {
     }    
 
     @FXML
-    private void sendbuttononclick(ActionEvent event) {
+    private void saveaspdfonclickbutton(ActionEvent event) {
     }
 
     @FXML
-    private void logoutbuttononclick(ActionEvent event) {
-    }
-
-    @FXML
-    private void downloadbuttononclick(ActionEvent event) {
+    private void logoutonclickbutton(ActionEvent event) {
     }
     
 }

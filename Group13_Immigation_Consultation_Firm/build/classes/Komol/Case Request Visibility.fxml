@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: aqua;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Komol.CaseRequestVisibilityController">
+   <children>
+      <Label layoutX="36.0" layoutY="46.0" text="view Client Case">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="398.0" layoutY="80.0" mnemonicParsing="false" onAction="#loadinfobuttononclick" text="Load info" />
+      <TableView layoutX="27.0" layoutY="136.0" prefHeight="200.0" prefWidth="554.0">
+        <columns>
+          <TableColumn fx:id="clientnameoncolumn" prefWidth="119.0" text="Name" />
+          <TableColumn fx:id="numberoncolumn" prefWidth="89.0" text="Number" />
+            <TableColumn fx:id="detailsoncolumn" minWidth="4.0" prefWidth="92.0" text="Details" />
+            <TableColumn fx:id="typeoncolumn" minWidth="0.0" prefWidth="131.0" text="type" />
+            <TableColumn fx:id="genderoncolumn" prefWidth="122.0" text="gender" />
+        </columns>
+      </TableView>
+      <Button layoutX="473.0" layoutY="349.0" mnemonicParsing="false" onAction="#logoutbuttononclick" text="Logout" />
+      <Button layoutX="521.0" layoutY="31.0" mnemonicParsing="false" onAction="#backonbuttononclick" text="Back" />
+   </children>
+</AnchorPane>
