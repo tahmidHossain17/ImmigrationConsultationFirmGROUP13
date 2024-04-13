@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="494.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.EditProfileDetailsSceneController">
+   <children>
+      <Label layoutX="27.0" layoutY="88.0" text="Name :" />
+      <Label layoutX="27.0" layoutY="135.0" text="Phone :" />
+      <Label layoutX="27.0" layoutY="178.0" text="E-mail: " />
+      <Label layoutX="27.0" layoutY="216.0" text="Date Of Birth :" />
+      <Label layoutX="457.0" layoutY="60.0" prefHeight="98.0" prefWidth="103.0" text="image" />
+      <DatePicker fx:id="dateOfBirthDatePicker" layoutX="110.0" layoutY="212.0" />
+      <RadioButton fx:id="maleRadioButton" layoutX="127.0" layoutY="36.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="femaleRadioButton" layoutX="261.0" layoutY="36.0" mnemonicParsing="false" text="Female" />
+      <TextField fx:id="nameTextField" layoutX="79.0" layoutY="84.0" />
+      <TextField fx:id="phoneTextField" layoutX="79.0" layoutY="131.0" />
+      <TextField fx:id="emailTextField" layoutX="79.0" layoutY="174.0" />
+      <Button fx:id="uploadPhotoButton" layoutX="464.0" layoutY="174.0" mnemonicParsing="false" text="Upload Photo" />
+      <ComboBox fx:id="nationalityComboBox" layoutX="261.0" layoutY="84.0" prefWidth="150.0" promptText="Nationality" />
+      <Label layoutX="28.0" layoutY="264.0" prefHeight="25.0" prefWidth="75.0" text="Passport No :  " />
+      <TextField fx:id="passportNoTextField" layoutX="122.0" layoutY="264.0" />
+      <Button fx:id="confirmButton" layoutX="57.0" layoutY="348.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Confirm " />
+      <Button fx:id="showUpdatedProfileButton" layoutX="241.0" layoutY="348.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="136.0" text="Show Updated Profile" />
+      <Button fx:id="saveAsPdfButton" layoutX="469.0" layoutY="348.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="Save as PDF" />
+   </children>
+</AnchorPane>

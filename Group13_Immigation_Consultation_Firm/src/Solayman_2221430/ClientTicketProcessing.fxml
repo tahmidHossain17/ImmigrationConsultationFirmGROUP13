@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.ClientTicketProcessingController">
+   <children>
+      <TableView fx:id="bookingRequestsTableView" layoutX="1.0" layoutY="41.0" prefHeight="197.0" prefWidth="617.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="102.0" text="Name" />
+          <TableColumn fx:id="passportNoColumn" prefWidth="115.0" text="Passport No" />
+            <TableColumn fx:id="flightSelected" prefWidth="118.0" text="Flight Selected" />
+            <TableColumn fx:id="dateOfFlightColumn" prefWidth="139.0" text="Date of Flight" />
+            <TableColumn fx:id="countryColumn" prefWidth="142.0" text="Country" />
+        </columns>
+      </TableView>
+      <Label layoutX="19.0" layoutY="369.0" text="Note:Please Confirm the tickets and send confirmation to the client by selecting the row and press confirm" />
+      <Button layoutX="523.0" layoutY="328.0" mnemonicParsing="false" onAction="#confirmButtonOnMouseClick" text="Confirm" />
+      <Button layoutX="10.0" layoutY="328.0" mnemonicParsing="false" onAction="#cannotBeProcessedButtonOnMouseClick" text="Cannot be processed " />
+      <Button fx:id="dashboardButton" layoutX="537.0" layoutY="-2.0" mnemonicParsing="false" text="Dashbaoard" />
+      <TextField fx:id="tickerNumberTextField" layoutX="125.0" layoutY="246.0" />
+      <Label layoutX="2.0" layoutY="250.0" text="Enter Ticket Number:" />
+      <TextField fx:id="passportNoTextField" layoutX="432.0" layoutY="246.0" />
+      <Label layoutX="291.0" layoutY="250.0" text="Enter Client Passport no:" />
+   </children>
+</AnchorPane>
