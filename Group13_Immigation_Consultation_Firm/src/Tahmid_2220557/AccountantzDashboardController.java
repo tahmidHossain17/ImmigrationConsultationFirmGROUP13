@@ -35,7 +35,7 @@ public class AccountantzDashboardController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainPKG/Login.fxml"));
         Parent parent = fxmlLoader.load();
 
-        // Retrieve preferred height and width from the loaded parent node
+        
         double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
         double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
 
