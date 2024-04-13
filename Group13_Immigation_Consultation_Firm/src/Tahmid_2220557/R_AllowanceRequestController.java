@@ -13,13 +13,9 @@ import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -71,7 +67,7 @@ public class R_AllowanceRequestController implements Initializable {
         ObjectOutputStream oos = null;
         File f = null;
         try {
-            f = new File("AllowanceRequests.bin");
+            f = new File("AllowanceRequest.bin");
             if (f.exists()) {
                 fos = new FileOutputStream(f, true);
                 oos = new AppendableObjectOutputStream(fos);
@@ -86,19 +82,7 @@ public class R_AllowanceRequestController implements Initializable {
             oos.close();
 
         } catch (IOException ex) {
-//                Logger.getLogger(FileHandleSceneController.class
-//                        .getName()).log(Level.SEVERE, null, ex);
-//            } finally {
-//                try {
-//                    if (oos != null) {
-//                        oos.close();
-//
-//                    }
-//                } catch (IOException ex) {
-//                    Logger.getLogger(FileHandleSceneController.class
-//                            .getName()).log(Level.SEVERE, null, ex);
-//                }
-//            }
+
 
         }
     }
@@ -120,7 +104,7 @@ public class R_AllowanceRequestController implements Initializable {
             AllowanceRequest allw;
         //FileInputStream fis = new FileInputStream("studObjects.bin");
         //ois = new ObjectInputStream(fis);
-        ois = new ObjectInputStream(new FileInputStream("AllowanceRequests.bin"));
+        ois = new ObjectInputStream(new FileInputStream("AllowanceRequest.bin"));
 
         outputTxtArea.setText(null);
         //int[] arr={1,2,3};

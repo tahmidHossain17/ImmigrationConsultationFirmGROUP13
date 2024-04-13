@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Group13_Immigation_Consultation_Firm.jar" size="84613" download="eager" />
+    <jar href="Group13_Immigation_Consultation_Firm.jar" size="82513" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="mainPKG.main"  name="Group13_Immigation_Consultation_Firm" />
   <update check="always"/>

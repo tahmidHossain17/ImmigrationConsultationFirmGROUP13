@@ -89,7 +89,7 @@ public class LoginController implements Initializable {
                 currentStage.setScene(scene);
             }
             if (userType.equals("Accountant")) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Tahmid_2220557/AccountantMainDashboard.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Tahmid_2220557/AccountantDashboard.fxml"));
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
                 currentStage.setScene(scene);

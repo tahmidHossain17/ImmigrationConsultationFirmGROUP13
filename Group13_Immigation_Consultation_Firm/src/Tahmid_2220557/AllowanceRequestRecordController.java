@@ -9,12 +9,15 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
@@ -38,20 +41,20 @@ public class AllowanceRequestRecordController implements Initializable {
     private TableColumn<AllowanceRequest, Integer> amountTableColumn;
     @FXML
     private TextArea outputTxtArea;
+    @FXML
+    private TextField SearchFeild;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        nameTableColumn.setCellValueFactory(new PropertyValueFactory<AllowanceRequest,String>("id"));
-        designationTableColumn.setCellValueFactory(new PropertyValueFactory<AllowanceRequest,String>("designation"));
+        nameTableColumn.setCellValueFactory(new PropertyValueFactory<AllowanceRequest,String>("Name"));
+        designationTableColumn.setCellValueFactory(new PropertyValueFactory<AllowanceRequest,String>("designantion"));
         allowanceTypeTableColumn.setCellValueFactory(new PropertyValueFactory<AllowanceRequest,String>("allowanceType"));
         paymentMethodTableColumn.setCellValueFactory(new PropertyValueFactory<AllowanceRequest,String>("paymentMethod"));
         amountTableColumn.setCellValueFactory(new PropertyValueFactory<AllowanceRequest,Integer>("amount"));
-//        StatusTableColumn.setCellValueFactory(new PropertyValueFactory<AllowanceRequest,String>("id"));
-        
-        // TODO
+
     }    
 
     @FXML
@@ -94,6 +97,22 @@ public class AllowanceRequestRecordController implements Initializable {
 
         }
 
+        
+    }
+
+    @FXML
+    private void searchbyEmpIDTExtFeildOnClk(ActionEvent event) {
+   String searchTerm = SearchFeild.getText().toLowerCase(); // Convert search term to lowercase for case-insensitive search
+    
+    // Clear the TableView
+    requestTableView.getItems().clear();
+    
+    // Iterate through the items in the TableView and add matching items to the TableView
+    for (AllowanceRequest request : requestTableView.getItems()) {
+        if (request.getName().toLowerCase().contains(searchTerm)) {
+            requestTableView.getItems().add(request);
+        }
+    }
         
     }
     
