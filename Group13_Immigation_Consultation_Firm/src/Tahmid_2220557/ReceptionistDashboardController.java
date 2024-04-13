@@ -32,9 +32,6 @@ public class ReceptionistDashboardController implements Initializable {
     }    
 
 
-    @FXML
-    private void generateBalancesheet(ActionEvent event) {
-    }
 
 
 
@@ -149,6 +146,10 @@ public class ReceptionistDashboardController implements Initializable {
         stage.show();
         
         
+    }
+
+    @FXML
+    private void TermsAndPolicyOnMouseClick(ActionEvent event) {
     }
 
     
