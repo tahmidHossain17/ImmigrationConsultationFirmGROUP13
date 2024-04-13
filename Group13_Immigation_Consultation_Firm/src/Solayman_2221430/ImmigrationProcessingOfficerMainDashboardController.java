@@ -4,15 +4,11 @@
  */
 package Solayman_2221430;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.layout.BorderPane;
 
 /**
  * FXML Controller class
@@ -21,75 +17,48 @@ import javafx.scene.layout.BorderPane;
  */
 public class ImmigrationProcessingOfficerMainDashboardController implements Initializable {
 
-    @FXML
-    private BorderPane borderpane;
-
-    
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        try {
-                Parent parent = FXMLLoader.load(getClass().getResource("ImmigrationProcessingOfficerDashboardScene.fxml"));
-                borderpane.setCenter(parent);    
-            } catch (IOException ex) {
-//                Logger.getLogger(User_05_MainDashboardController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-    
-       
-        
+        // TODO
     }    
 
     @FXML
-    private void openUpdatePolicySceneOnMouseClick(ActionEvent event)throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("PolicyUpdateScene.fxml"));
-        borderpane.setCenter(parent);
-        
+    private void openUpdatePolicySceneOnMouseClick(ActionEvent event) {
     }
 
     @FXML
-    private void openVerifyDocumentOnMouseClick(ActionEvent event)throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("VerifyDoocumentScene.fxml"));
-        borderpane.setCenter(parent);
+    private void openVerifyDocumentOnMouseClick(ActionEvent event) {
     }
 
     @FXML
-    private void openClientTicketProcessingScene(ActionEvent event)throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("ClientTicketProcessing.fxml"));
-        borderpane.setCenter(parent);
-    }
-
-    
-// Baki
-    
-    @FXML
-    private void openAllowanceRequestScene(ActionEvent event)throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("PolicyUpdateScene.fxml"));
-        borderpane.setCenter(parent);
+    private void openClientTicketProcessingScene(ActionEvent event) {
     }
 
     @FXML
-    private void openViewContactsScene(ActionEvent event)throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("ViewContactsScene.fxml"));
-        borderpane.setCenter(parent);
+    private void openAllowanceRequestScene(ActionEvent event) {
     }
 
     @FXML
-    private void openEditAccomodationUpdatesOnMouseClick(ActionEvent event)throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("EditAccomodationUpdatesScene.fxml"));
-        borderpane.setCenter(parent);
+    private void openViewContactsScene(ActionEvent event) {
     }
 
     @FXML
-    private void openSendUpdatesToManagingDirectorScene(ActionEvent event)throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("SendUpdateToManagingDirectorScene.fxml"));
-        borderpane.setCenter(parent);
+    private void openEditAccomodationUpdatesOnMouseClick(ActionEvent event) {
     }
 
-
-// baki
     @FXML
-    private void openTermsAndPolicySceneOnMouseClick(ActionEvent event)throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("PolicyUpdateScene.fxml"));
-        borderpane.setCenter(parent);
+    private void openSendUpdatesToManagingDirectorScene(ActionEvent event) {
+    }
+
+    @FXML
+    private void openTermsAndPolicySceneOnMouseClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void logoutbuttononclick(ActionEvent event) {
     }
     
 }
