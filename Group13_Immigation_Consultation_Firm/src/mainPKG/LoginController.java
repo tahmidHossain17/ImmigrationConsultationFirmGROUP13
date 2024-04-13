@@ -88,6 +88,18 @@ public class LoginController implements Initializable {
                 Scene scene = new Scene(root);
                 currentStage.setScene(scene);
             }
+            if (userType.equals("Accountant")) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Tahmid_2220557/AccountantMainDashboard.fxml"));
+                Parent root = loader.load();
+                Scene scene = new Scene(root);
+                currentStage.setScene(scene);
+            }
+            if (userType.equals("Receptionist")) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Tahmid_2220557/R_ReceptionistMainDashboard.fxml"));
+                Parent root = loader.load();
+                Scene scene = new Scene(root);
+                currentStage.setScene(scene);
+            }
                       
         } 
         else {

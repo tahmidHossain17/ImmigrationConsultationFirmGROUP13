@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.R_ReceptionistMainDashboardController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Menu">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#clientProfileViewOnMouseClick" text="Client Profile View" />
+                  <MenuItem mnemonicParsing="false" onAction="#fillupClientProfileOnMouseClick" text="Fill Up Client Information" />
+                  <MenuItem mnemonicParsing="false" onAction="#appointmentScheduleRecordOnMouseClick" text="Appointment Scheduling" />
+                  <MenuItem mnemonicParsing="false" onAction="#generatePaySlipOnMouseClick" text="Generate PaySlip" />
+                  <MenuItem mnemonicParsing="false" onAction="#CheckEligibilityOnMouseClick" text="Check Eligibility" />
+                  <MenuItem mnemonicParsing="false" onAction="#attendenceAndHoursOnMouseClick" text="Attendence and Working Hours" />
+                  <MenuItem mnemonicParsing="false" onAction="#TermsAndPolicyOnMouseClick" text="Terms And Policy" />
+                  <MenuItem mnemonicParsing="false" onAction="#requestForAllowanceOnMouseClick" text="Request For Allowance" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
