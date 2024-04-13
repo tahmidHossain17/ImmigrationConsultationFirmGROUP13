@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="486.0" prefWidth="632.0" style="-fx-background-color: aqua;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Komol.User_06_clientReviewController">
+   <children>
+      <Label layoutX="127.0" layoutY="25.0" prefHeight="27.0" prefWidth="274.0" text="Client Reviw Report">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="45.0" layoutY="98.0" mnemonicParsing="false" onAction="#Loadbuttononclick" text="Load" />
+      <TableView fx:id="tableview" layoutX="166.0" layoutY="70.0" prefHeight="200.0" prefWidth="454.0">
+        <columns>
+          <TableColumn fx:id="serialnooncolumn" prefWidth="75.0" text="serial no" />
+            <TableColumn fx:id="clientnameoncolumn" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="secesiontimeoncolumn" prefWidth="75.0" text="secesion  date" />
+            <TableColumn fx:id="genderoncolumn" prefWidth="75.0" text="gender" />
+            <TableColumn fx:id="ratingsoncolumn" prefWidth="75.0" text="Ratings" />
+            <TableColumn fx:id="feedbackoncolumn" prefWidth="75.0" text="feedback" />
+        </columns>
+      </TableView>
+      <Label layoutX="225.0" layoutY="286.0" prefHeight="27.0" prefWidth="161.0" text="PIe chart">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="39.0" layoutY="338.0" mnemonicParsing="false" onAction="#ratingsbuttononclick" text="Ratings" />
+      <Button layoutX="537.0" layoutY="441.0" mnemonicParsing="false" text="Log out" />
+      <PieChart fx:id="Piechart" layoutX="170.0" layoutY="327.0" prefHeight="150.0" prefWidth="359.0" />
+   </children>
+</AnchorPane>
