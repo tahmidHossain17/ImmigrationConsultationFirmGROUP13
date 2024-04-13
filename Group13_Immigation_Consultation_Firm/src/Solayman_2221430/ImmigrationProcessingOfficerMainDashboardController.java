@@ -15,7 +15,7 @@ import javafx.fxml.Initializable;
  *
  * @author diyan
  */
-public class ImmigrationProcessing_OfficerMainDashboardController implements Initializable {
+public class ImmigrationProcessingOfficerMainDashboardController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -26,35 +26,35 @@ public class ImmigrationProcessing_OfficerMainDashboardController implements Ini
     }    
 
     @FXML
-    private void openFixAppointmentSceneOnMouseClick(ActionEvent event) {
+    private void openUpdatePolicySceneOnMouseClick(ActionEvent event) {
     }
 
     @FXML
-    private void openEligibilityToApplySceneOnMouseClick(ActionEvent event) {
+    private void openVerifyDocumentOnMouseClick(ActionEvent event) {
     }
 
     @FXML
-    private void openBookAccomodationSceneOnMouseClick(ActionEvent event) {
+    private void openClientTicketProcessingScene(ActionEvent event) {
     }
 
     @FXML
-    private void openRequestForBookingATicketSceneOnMouseClick(ActionEvent event) {
+    private void openAllowanceRequestScene(ActionEvent event) {
     }
 
     @FXML
-    private void openKnowAboutYourDestinationSceneOnMouseClick(ActionEvent event) {
+    private void openViewContactsScene(ActionEvent event) {
     }
 
     @FXML
-    private void openReviewsSceneOnMouseClick(ActionEvent event) {
+    private void openEditAccomodationUpdatesOnMouseClick(ActionEvent event) {
     }
 
     @FXML
-    private void openApplyForBankSolvencySceneOnMouseClick(ActionEvent event) {
+    private void openSendUpdatesToManagingDirectorScene(ActionEvent event) {
     }
 
     @FXML
-    private void addProfileInfoButtonOnMouseClick(ActionEvent event) {
+    private void openTermsAndPolicySceneOnMouseClick(ActionEvent event) {
     }
 
     @FXML

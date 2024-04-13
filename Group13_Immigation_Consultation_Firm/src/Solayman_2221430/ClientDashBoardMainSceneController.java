@@ -40,7 +40,7 @@ public class ClientDashBoardMainSceneController implements Initializable {
         double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
 
         Stage stage = new Stage();
-        stage.setTitle("Case");
+//        stage.setTitle("Case");
         stage.setScene(new Scene(parent, prefWidth, prefHeight));
         stage.show();
     }
