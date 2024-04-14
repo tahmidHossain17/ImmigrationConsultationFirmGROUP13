@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane id="AnchorPane" prefHeight="469.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Solayman_2221430.PolicyUpdateSceneController">
+   <children>
+      <Label layoutX="23.0" layoutY="36.0" prefHeight="38.0" prefWidth="101.0" text="Country :" />
+      <Label layoutX="14.0" layoutY="81.0" prefHeight="30.0" prefWidth="136.0" text="Affiliated University add :" />
+      <TextField fx:id="affiliatedUniTextField" layoutX="174.0" layoutY="81.0" prefHeight="30.0" prefWidth="207.0" />
+      <Button layoutX="445.0" layoutY="319.0" mnemonicParsing="false" onAction="#addButtonOnMouseClick" prefHeight="30.0" prefWidth="65.0" text="Add " />
+      <Label layoutX="13.0" layoutY="117.0" prefHeight="30.0" prefWidth="150.0" text="Affiliated Organization add :" />
+      <TextField fx:id="affiliatedOrgTextField" layoutX="174.0" layoutY="117.0" prefHeight="30.0" prefWidth="207.0" />
+      <Label layoutX="12.0" layoutY="155.0" prefHeight="30.0" prefWidth="136.0" text="Tourist Places to add :" />
+      <TextField fx:id="touristPlacesTextField" layoutX="175.0" layoutY="157.0" prefHeight="30.0" prefWidth="207.0" />
+      <ComboBox fx:id="ieltsComboBox" layoutX="536.0" layoutY="78.0" prefHeight="30.0" prefWidth="65.0" />
+      <Label layoutX="398.0" layoutY="81.0" prefHeight="30.0" prefWidth="128.0" text="IELTS Score for Student:" />
+      <ComboBox fx:id="countryComboBox" layoutX="124.0" layoutY="36.0" prefHeight="30.0" prefWidth="136.0" />
+      <ComboBox fx:id="satComboBox" layoutX="536.0" layoutY="115.0" prefHeight="30.0" prefWidth="65.0" />
+      <Label layoutX="398.0" layoutY="118.0" prefHeight="30.0" prefWidth="128.0" text="SAT score for Student:" />
+      <ComboBox fx:id="greComboBox" layoutX="536.0" layoutY="154.0" prefHeight="30.0" prefWidth="65.0" />
+      <Label layoutX="398.0" layoutY="157.0" prefHeight="30.0" prefWidth="128.0" text="GRE score for Student:" />
+      <Label layoutX="9.0" layoutY="255.0" prefHeight="38.0" prefWidth="101.0" text="Language issue :" />
+      <ComboBox fx:id="languageIssueComboBox" layoutX="118.0" layoutY="259.0" prefHeight="30.0" prefWidth="143.0" />
+      <Label layoutX="287.0" layoutY="36.0" prefHeight="30.0" prefWidth="150.0" text="Spouse Visa acceptace Rate:" />
+      <ComboBox fx:id="spouseVisaRateComboBox" layoutX="445.0" layoutY="36.0" prefHeight="30.0" prefWidth="136.0" />
+      <Label layoutX="269.0" layoutY="255.0" prefHeight="38.0" prefWidth="185.0" text="Minimum Education For Working:" />
+      <ComboBox fx:id="minimumEducationComboBox" layoutX="462.0" layoutY="255.0" prefHeight="30.0" prefWidth="143.0" />
+      <Line endX="505.0" layoutX="125.0" layoutY="234.0" startX="-110.0" />
+      <Label layoutX="8.0" layoutY="320.0" prefHeight="30.0" prefWidth="136.0" text="Extra Beneficiary Skills:" />
+      <TextField fx:id="skillsTextField" layoutX="160.0" layoutY="298.0" prefHeight="72.0" prefWidth="253.0" />
+      <Button layoutX="260.0" layoutY="393.0" mnemonicParsing="false" onAction="#saveButtonOnMouseClick" prefHeight="30.0" prefWidth="83.0" text="Save " />
+      <Button layoutX="511.0" layoutY="430.0" mnemonicParsing="false" onAction="#backToDashboardOnMouseClick" text="Back to Dashboard" />
+   </children>
+</AnchorPane>

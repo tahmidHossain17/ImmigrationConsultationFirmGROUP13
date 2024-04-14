@@ -28,7 +28,6 @@ public class ConsultantDashboardController implements Initializable {
         // TODO
     }    
 
-    @FXML
     private void applicationformreviewbuttononclick(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ApplicationFormReview.fxml"));
         Parent parent = fxmlLoader.load();
@@ -45,7 +44,6 @@ public class ConsultantDashboardController implements Initializable {
         
     }
 
-    @FXML
     private void clientcurrentstatusbuttononclick(ActionEvent event) throws IOException {
          FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ClientCurrentStatus.fxml"));
         Parent parent = fxmlLoader.load();
@@ -62,7 +60,6 @@ public class ConsultantDashboardController implements Initializable {
     
     }
 
-    @FXML
     private void allowancerequestbuttononclick(ActionEvent event) throws IOException {
          FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Tahmid_2220557/R_AllowanceRequest.fxml"));
         Parent parent = fxmlLoader.load();
@@ -79,7 +76,6 @@ public class ConsultantDashboardController implements Initializable {
         
     }
 
-    @FXML
     private void clientreviewbuttonclick(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ClientReview.fxml"));
         Parent parent = fxmlLoader.load();
@@ -94,7 +90,6 @@ public class ConsultantDashboardController implements Initializable {
         stage.show();
     }
 
-    @FXML
     private void complainitbuttononclick(ActionEvent event) throws IOException {
          FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ComplainIT.fxml"));
         Parent parent = fxmlLoader.load();
@@ -110,7 +105,6 @@ public class ConsultantDashboardController implements Initializable {
         
     }
 
-    @FXML
     private void updatetermsandpolicybuttononclick(ActionEvent event)throws IOException {
          FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Updatetermsandpolicyfeedback.fxml"));
         Parent parent = fxmlLoader.load();
@@ -149,7 +143,6 @@ public class ConsultantDashboardController implements Initializable {
 
 
 
-    @FXML
     private void universitylistbuttononclick(ActionEvent event) throws IOException {
          FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("University List Review.fxml"));
         Parent parent = fxmlLoader.load();
@@ -164,7 +157,6 @@ public class ConsultantDashboardController implements Initializable {
         stage.show(); 
     }
 
-    @FXML
     private void appointmentchackingbuttononclick(ActionEvent event)  throws IOException {
          FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Appointment.fxml"));
         Parent parent = fxmlLoader.load();
@@ -177,6 +169,38 @@ public class ConsultantDashboardController implements Initializable {
         stage.setTitle("Appointment");
         stage.setScene(new Scene(parent, prefWidth, prefHeight));
         stage.show(); 
+    }
+
+    @FXML
+    private void openFixAppointmentSceneOnMouseClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void openEligibilityToApplySceneOnMouseClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void openBookAccomodationSceneOnMouseClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void openRequestForBookingATicketSceneOnMouseClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void openKnowAboutYourDestinationSceneOnMouseClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void openReviewsSceneOnMouseClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void openApplyForBankSolvencySceneOnMouseClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void addProfileInfoButtonOnMouseClick(ActionEvent event) {
     }
 
     

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mdBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prosanto2010271.ManagingDirectorController">
+   <top>
+      <MenuBar prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: #b4a7d6;" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Log Out" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox alignment="CENTER" prefHeight="320.0" prefWidth="161.0" style="-fx-background-color: cca7d6;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#profileButtonOnMouseClick" prefHeight="29.0" prefWidth="177.0" style="-fx-background-color: #c9d6a7;" text="Profile">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#employeeInsightButtonOnMouseClick" prefHeight="31.0" prefWidth="168.0" style="-fx-background-color: #c9d6a7;" text="Employee Insight">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#clientsStatisticsButtonOnMouseClick" prefHeight="35.0" prefWidth="163.0" style="-fx-background-color: #c9d6a7;" text="Clients Statistics">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#revenueStatisticsButtonOnMouseClick" prefHeight="33.0" prefWidth="161.0" style="-fx-background-color: #c9d6a7;" text="Revenue Statistics">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#feedbackButtonOnMouseClick" prefHeight="44.0" prefWidth="161.0" style="-fx-background-color: #c9d6a7;" text="Feedback &amp; Suggestion">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button depthTest="ENABLE" mnemonicParsing="false" onAction="#purchaseButtonOnMouseClick" prefHeight="33.0" prefWidth="172.0" style="-fx-background-color: #c9d6a7;" text="Purchase approval">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#allowanceButtonOnMouseClick" pickOnBounds="false" prefHeight="31.0" prefWidth="199.0" style="-fx-background-color: #c9d6a7;" text="Allowance approval">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#reportButtonOnMouseClick" prefHeight="53.0" prefWidth="194.0" style="-fx-background-color: #c9d6a7;" text="View Report">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button layoutX="11.0" layoutY="24.0" mnemonicParsing="false" onAction="#termsAndPolicyButtonOnMouseClick" prefHeight="40.0" prefWidth="182.0" style="-fx-background-color: #c9d6a7;" text="Terms and Policy">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="315.0" prefWidth="432.0" style="-fx-background-color: #808080;" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <ButtonBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #b4a7d6;">
+         <buttons>
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="590.0" text="Immigration Consulting Firm" wrapText="true" />
+         </buttons>
+      </ButtonBar>
+   </bottom>
+</BorderPane>

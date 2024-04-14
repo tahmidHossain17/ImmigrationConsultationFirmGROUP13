@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Label alignment="CENTER" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: a7d6b4;" text="Managing Director" BorderPane.alignment="CENTER" />
+   </top>
+   <right>
+      <AnchorPane prefHeight="340.0" prefWidth="617.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="66.0" layoutY="47.0" prefHeight="41.0" prefWidth="94.0" text="Name :" />
+            <Label layoutX="67.0" layoutY="88.0" prefHeight="41.0" prefWidth="108.0" text="ID :" />
+            <Label layoutX="65.0" layoutY="129.0" prefHeight="41.0" prefWidth="155.0" text="Email :" />
+            <Label layoutX="61.0" layoutY="162.0" prefHeight="41.0" prefWidth="157.0" text="Mobile Number :" />
+            <Button layoutX="428.0" layoutY="68.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="143.0" text="Change Password" />
+            <Button layoutX="429.0" layoutY="125.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="142.0" text="Update Mobile Number" />
+            <Button layoutX="429.0" layoutY="185.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="141.0" text="Update Email" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

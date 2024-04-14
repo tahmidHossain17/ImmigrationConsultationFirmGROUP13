@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BarChart layoutX="246.0" layoutY="34.0" prefHeight="187.0" prefWidth="294.0">
+         <xAxis>
+            <CategoryAxis label="Months" prefHeight="19.0" prefWidth="421.0" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis label="Client" side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <BarChart layoutX="246.0" layoutY="228.0" prefHeight="212.0" prefWidth="265.0">
+         <xAxis>
+            <CategoryAxis label="Months" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis label="Active Client" side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <PieChart layoutX="14.0" layoutY="53.0" prefHeight="316.0" prefWidth="216.0" title="clients" />
+   </children>
+</AnchorPane>

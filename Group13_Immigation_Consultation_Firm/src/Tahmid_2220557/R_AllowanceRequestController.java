@@ -87,9 +87,6 @@ public class R_AllowanceRequestController implements Initializable {
         }
     }
 
-    @FXML
-    private void backOnMouseClick(ActionEvent event) {
-    }
 
     @FXML
     private void ShowRequestOnMouseClick(ActionEvent event) {
@@ -132,5 +129,9 @@ public class R_AllowanceRequestController implements Initializable {
 
         }
 }
+
+    @FXML
+    private void backOnMouseClick(ActionEvent event) {
+    }
 
 }

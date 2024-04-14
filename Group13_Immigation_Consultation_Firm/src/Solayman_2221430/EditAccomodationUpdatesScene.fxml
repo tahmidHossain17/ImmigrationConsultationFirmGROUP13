@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="417.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Solayman_2221430.EditAccomodationUpdatesSceneController">
+   <children>
+      <Label layoutX="42.0" layoutY="36.0" prefHeight="45.0" prefWidth="113.0" text="Country :" />
+      <ComboBox fx:id="countryComboBox" layoutX="171.0" layoutY="46.0" prefWidth="150.0" />
+      <Label layoutX="32.0" layoutY="80.0" prefHeight="45.0" prefWidth="113.0" text="Accomodation Type:" />
+      <RadioButton fx:id="appartmentRadioButton" layoutX="171.0" layoutY="94.0" mnemonicParsing="false" text="Appartment" />
+      <RadioButton fx:id="dormetoryRadioButton" layoutX="289.0" layoutY="94.0" mnemonicParsing="false" text="Dormetory" />
+      <Label layoutX="32.0" layoutY="125.0" prefHeight="45.0" prefWidth="113.0" text="Gender Allowance:" />
+      <RadioButton fx:id="maleRadioButton" layoutX="171.0" layoutY="139.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="femaleRadioButton" layoutX="247.0" layoutY="139.0" mnemonicParsing="false" text="Female" />
+      <RadioButton fx:id="bothRadioButton" layoutX="339.0" layoutY="139.0" mnemonicParsing="false" text="Both" />
+      <Label layoutX="32.0" layoutY="170.0" prefHeight="32.0" prefWidth="98.0" text="Owner's name :" />
+      <Label layoutX="32.0" layoutY="202.0" prefHeight="32.0" prefWidth="98.0" text="Owner's E-mail :" />
+      <TextField fx:id="ownersNameTextField" layoutX="139.0" layoutY="174.0" />
+      <TextField fx:id="ownersemailTextField" layoutX="139.0" layoutY="206.0" />
+      <Label layoutX="306.0" layoutY="171.0" prefHeight="32.0" prefWidth="98.0" text="No of Rooms:" />
+      <ComboBox fx:id="noOfRoomsComboBox" layoutX="429.0" layoutY="174.0" prefWidth="150.0" />
+      <Label layoutX="306.0" layoutY="203.0" prefHeight="32.0" prefWidth="98.0" text="Person per Room:" />
+      <ComboBox fx:id="personPerRoomComboBox" layoutX="429.0" layoutY="206.0" prefWidth="150.0" />
+      <Label layoutX="33.0" layoutY="244.0" prefHeight="32.0" prefWidth="98.0" text="Advance:" />
+      <TextField fx:id="advanceTextField" layoutX="139.0" layoutY="242.0" />
+      <Label layoutX="33.0" layoutY="273.0" prefHeight="32.0" prefWidth="98.0" text="Per Person Rent :" />
+      <TextField fx:id="perPersonRentTextField" layoutX="139.0" layoutY="276.0" />
+      <Button fx:id="addInformationButton" layoutX="385.0" layoutY="282.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="139.0" text="Add Information" />
+      <Button fx:id="generatePdfButton" layoutX="237.0" layoutY="347.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="139.0" text="Generate PDF" />
+      <CheckBox fx:id="onlyForCouplesCheckBox" layoutX="476.0" layoutY="63.0" mnemonicParsing="false" text="Only For Couples" />
+   </children>
+</AnchorPane>

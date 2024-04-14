@@ -4,11 +4,13 @@
  */
 package Tahmid_2220557;
 
+import java.io.Serializable;
+
 /**
  *
  * @author MSI
  */
-public class Payroll {
+public class Payroll implements Serializable {
     String employee,name;
     int tax_payroll;
     int basic;
