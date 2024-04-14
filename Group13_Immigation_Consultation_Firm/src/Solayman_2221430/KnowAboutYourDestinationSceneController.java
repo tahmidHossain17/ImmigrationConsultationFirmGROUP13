@@ -4,11 +4,17 @@
  */
 package Solayman_2221430;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -16,24 +22,50 @@ import javafx.scene.control.Button;
  * @author diyan
  */
 public class KnowAboutYourDestinationSceneController implements Initializable {
+    private String dataToPass;
 
-    @FXML
-    private Button usaButton;
-    @FXML
-    private Button chainaButton;
-    @FXML
-    private Button malaysiaButton;
-    @FXML
-    private Button canadaButton;
-    @FXML
-    private Button australiaBitton;
+    // Define a method to set data
+    public void setDataToPass(String data) {
+        this.dataToPass = data;
+    }
 
-    /**
-     * Initializes the controller class.
-     */
+
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void usaButtonOnMouseClick(ActionEvent event)throws IOException {
+        Parent node= FXMLLoader.load(getClass().getResource("KnowAboutCountryScene.fxml"));
+        
+        
+        Scene country = new Scene(node);
+        
+        
+        
+        Stage countryStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        
+        countryStage.setTitle("Know About USA");
+        countryStage.setScene(country);
+        countryStage.show();
+    }
+
+    @FXML
+    private void chainaButtonOnMouseClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void malaysiaButtonOnMouseClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void canadaButtonOnMouseClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void australiaBittonOnMouseClick(ActionEvent event) {
+    }
     
 }

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="472.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Solayman_2221430.ReviewsSceneController">
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Solayman_2221430.ReviewsSceneController">
    <children>
       <Label layoutX="17.0" layoutY="82.0" prefHeight="52.0" prefWidth="97.0" text="Add Review:">
          <font>
@@ -22,13 +22,29 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <ComboBox fx:id="rateUsButton" layoutX="114.0" layoutY="37.0" prefWidth="150.0" />
-      <TableView fx:id="reviewTableView" layoutY="196.0" prefHeight="276.0" prefWidth="646.0">
+      <ComboBox fx:id="rateUsComboBox" layoutX="114.0" layoutY="37.0" prefWidth="150.0" />
+      <TableView fx:id="reviewTableView" layoutX="6.0" layoutY="223.0" prefHeight="216.0" prefWidth="643.0">
         <columns>
-          <TableColumn fx:id="clientNameColumn" prefWidth="75.0" text="Client Name" />
-          <TableColumn fx:id="reviewColumn" prefWidth="570.0" text="Review" />
+          <TableColumn fx:id="clientNameColumn" prefWidth="102.0" text="Client Name" />
+          <TableColumn fx:id="reviewColumn" prefWidth="543.0" text="Review" />
         </columns>
       </TableView>
-      <Button fx:id="addReviewButton" layoutX="508.0" layoutY="151.0" mnemonicParsing="false" text="Add Review" />
+      <Button layoutX="544.0" layoutY="188.0" mnemonicParsing="false" onAction="#addReviewButtonOnMouseClick" text="Add Review" />
+      <Label fx:id="ratingNotificationShowLabel" layoutX="360.0" layoutY="17.0" prefHeight="52.0" prefWidth="245.0" />
+      <Label layoutX="25.0" layoutY="145.0" prefHeight="34.0" prefWidth="56.0" text="Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTextField" layoutX="87.0" layoutY="150.0" />
+      <Label layoutX="244.0" layoutY="145.0" prefHeight="34.0" prefWidth="56.0" text="E-mail">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailTextField" layoutX="306.0" layoutY="150.0" prefHeight="25.0" prefWidth="183.0" />
+      <Label layoutX="66.0" layoutY="188.0" prefHeight="25.0" prefWidth="469.0" text="Leave your Name and email So that we can reach you " />
+      <Label fx:id="showAddedNotificationLabel" layoutX="21.0" layoutY="451.0" prefHeight="34.0" prefWidth="337.0" />
+      <Button layoutX="526.0" layoutY="456.0" mnemonicParsing="false" onAction="#loadNewReviewButtonOnMouseClick" prefHeight="25.0" prefWidth="71.0" text="Load" />
    </children>
 </AnchorPane>

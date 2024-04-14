@@ -36,12 +36,11 @@
             <Font name="System Italic" size="21.0" />
          </font>
       </Label>
-      <TableView fx:id="extraInfoTableView" layoutY="321.0" prefHeight="201.0" prefWidth="708.0">
+      <TableView fx:id="extraInfoTableView" layoutX="2.0" layoutY="313.0" prefHeight="201.0" prefWidth="708.0">
         <columns>
-          <TableColumn fx:id="candidateTypeColumn" prefWidth="105.0" text="Candidate Type" />
-          <TableColumn fx:id="languageHelpColumn" prefWidth="94.0" text="Language help" />
-            <TableColumn fx:id="englishTestingToolsColumn" prefWidth="119.0" text="English testing tools" />
-            <TableColumn fx:id="spouseVisaColumn" prefWidth="175.0" text="Possibiliities of Spouse visa" />
+          <TableColumn fx:id="languageHelpColumn" prefWidth="113.0" text="Language help" />
+            <TableColumn fx:id="extraSkillsColumn" prefWidth="265.0" text="Extra Skills that are commonly used " />
+            <TableColumn fx:id="spouseVisaColumn" prefWidth="212.0" text="Possibiliities of Spouse visa" />
         </columns>
       </TableView>
       <Label layoutX="14.0" layoutY="241.0" prefHeight="39.0" prefWidth="181.0" text="Tourist Places to visit :">
@@ -49,6 +48,7 @@
             <Font name="System Bold" size="15.0" />
          </font></Label>
       <Label fx:id="touristPlacesTovisitLabel" layoutX="201.0" layoutY="230.0" prefHeight="67.0" prefWidth="494.0" text="Label" />
-      <Button fx:id="backToDashboardButton" layoutX="563.0" layoutY="522.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="132.0" text="Back to Dashboard" />
+      <Button layoutX="563.0" layoutY="522.0" mnemonicParsing="false" onAction="#backToDashboardButtonOnMouseClick" prefHeight="39.0" prefWidth="132.0" text="Back to Dashboard" />
+      <Button layoutX="517.0" layoutY="32.0" mnemonicParsing="false" onAction="#clickToLoadInformationsButtonOnMouseClick" prefHeight="31.0" prefWidth="157.0" text="Click to load Informations" />
    </children>
 </AnchorPane>
