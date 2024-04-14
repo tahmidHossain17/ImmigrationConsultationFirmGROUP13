@@ -13,9 +13,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.PieChart;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -23,26 +23,12 @@ import javafx.stage.Stage;
  *
  * @author Komol
  */
-public class UniversityListReviewController implements Initializable {
+public class ViewcaseratiochartController implements Initializable {
 
     @FXML
-    private TextField universitynametextfield;
+    private BarChart<String, Integer> piechart;
     @FXML
-    private TextField countrynametextfield;
-    @FXML
-    private TextField IELTSontextfield;
-    @FXML
-    private TextField greTextField;
-    @FXML
-    private TextField Acceptanceratetextfield;
-    @FXML
-    private RadioButton USAradiobutton;
-    @FXML
-    private RadioButton Australiaradiobutton;
-    @FXML
-    private RadioButton ukradiobutton;
-    @FXML
-    private RadioButton canadaradiobutton;
+    private PieChart barchart;
 
     /**
      * Initializes the controller class.
@@ -53,11 +39,11 @@ public class UniversityListReviewController implements Initializable {
     }    
 
     @FXML
-    private void saveaspdfonclickbutton(ActionEvent event) {
+    private void loadbuttononclick(ActionEvent event) {
     }
 
     @FXML
-    private void logoutonclickbutton(ActionEvent event) throws IOException {
+    private void logoutbuttononclick(ActionEvent event) throws IOException {
          FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainPKG/Login.fxml"));
         Parent parent = fxmlLoader.load();
 
@@ -68,8 +54,11 @@ public class UniversityListReviewController implements Initializable {
         Stage stage = new Stage();
         stage.setTitle("login");
         stage.setScene(new Scene(parent, prefWidth, prefHeight));
-        stage.show(); 
-    
+        stage.show();  
+    }
+
+    @FXML
+    private void backbuttononclick(ActionEvent event) {
     }
     
 }

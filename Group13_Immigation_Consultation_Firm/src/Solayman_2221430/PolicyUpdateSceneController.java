@@ -4,12 +4,15 @@
  */
 package Solayman_2221430;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -82,32 +85,63 @@ public class PolicyUpdateSceneController implements Initializable {
 
     @FXML
     private void saveButtonOnMouseClick(ActionEvent event) {
-        
-        try{
-                
-                FileOutputStream fos= new FileOutputStream("PolicyUpdatesFromImmigrationOfficer.bin",true);
-                
-                ObjectOutputStream oos = new ObjectOutputStream(fos);
-                
-                for(PolicyUpdate i:policyList){
-                
-                    oos.writeObject(i);
-                    
-                }
-                oos.close();
-                
+        FileOutputStream fos = null;
+        ObjectOutputStream oos = null;
+        File f = null;
+        try {
+            f = new File("PolicyUpdatesFromImmigrationOfficer.bin");
+            if (f.exists()) {
+                fos = new FileOutputStream(f, true);
+                oos = new AppendableObjectOutputStream(fos);
+            } else {
+                fos = new FileOutputStream(f);
+                oos = new ObjectOutputStream(fos);
             }
-            catch(IOException e){}
+            for (PolicyUpdate i : policyList) {
+
+                oos.writeObject(i);
+
+            }
+
+        } catch (IOException ex) {
+            Logger.getLogger(AddContactsSceneController.class
+                    .getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if (oos != null) {
+                    oos.close();
+
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(AddContactsSceneController.class
+                        .getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+//        try{
+//                
+//                FileOutputStream fos= new FileOutputStream("PolicyUpdatesFromImmigrationOfficer.bin",true);
+//                
+//                ObjectOutputStream oos = new ObjectOutputStream(fos);
+//                
+//                for(PolicyUpdate i:policyList){
+//                
+//                    oos.writeObject(i);
+//                    
+//                }
+//                oos.close();
+//                
+//            }
+//            catch(IOException e){}
+
     }
+    
 
     @FXML
     private void addButtonOnMouseClick(ActionEvent event) {
         policyList = new ArrayList<PolicyUpdate>();
         policyList.add(new PolicyUpdate(countryComboBox.getValue(),spouseVisaRateComboBox.getValue(),affiliatedUniTextField.getText(),affiliatedOrgTextField.getText(),touristPlacesTextField.getText(),ieltsComboBox.getValue(),satComboBox.getValue(),greComboBox.getValue(),languageIssueComboBox.getValue(),skillsTextField.getText(),minimumEducationComboBox.getValue()));
-        
-        
-        
-        
+
     }
     
     

@@ -12,27 +12,27 @@
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="usaButton" layoutX="68.0" layoutY="66.0" mnemonicParsing="false" prefHeight="106.0" prefWidth="118.0" text="USA">
+      <Button layoutX="68.0" layoutY="66.0" mnemonicParsing="false" onAction="#usaButtonOnMouseClick" prefHeight="106.0" prefWidth="118.0" text="USA">
          <font>
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="chainaButton" layoutX="225.0" layoutY="66.0" mnemonicParsing="false" prefHeight="106.0" prefWidth="118.0" text="China">
+      <Button layoutX="225.0" layoutY="66.0" mnemonicParsing="false" onAction="#chainaButtonOnMouseClick" prefHeight="106.0" prefWidth="118.0" text="China">
          <font>
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="malaysiaButton" layoutX="392.0" layoutY="66.0" mnemonicParsing="false" prefHeight="106.0" prefWidth="118.0" text="Malaysia">
+      <Button layoutX="392.0" layoutY="66.0" mnemonicParsing="false" onAction="#malaysiaButtonOnMouseClick" prefHeight="106.0" prefWidth="118.0" text="Malaysia">
          <font>
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="canadaButton" layoutX="313.0" layoutY="192.0" mnemonicParsing="false" prefHeight="106.0" prefWidth="118.0" text="Canada">
+      <Button layoutX="313.0" layoutY="192.0" mnemonicParsing="false" onAction="#canadaButtonOnMouseClick" prefHeight="106.0" prefWidth="118.0" text="Canada">
          <font>
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="australiaBitton" layoutX="139.0" layoutY="192.0" mnemonicParsing="false" prefHeight="106.0" prefWidth="118.0" text="Australia">
+      <Button layoutX="139.0" layoutY="192.0" mnemonicParsing="false" onAction="#australiaBittonOnMouseClick" prefHeight="106.0" prefWidth="118.0" text="Australia">
          <font>
             <Font size="22.0" />
          </font>
