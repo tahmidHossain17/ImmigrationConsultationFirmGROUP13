@@ -32,7 +32,7 @@ public class ClientDashBoardMainSceneController implements Initializable {
     }    
 
     private void openFixAppointmentSceneOnMouseClick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ClientPaymentStatus.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ClientDashBoard.fxml"));
         Parent parent = fxmlLoader.load();
 
     
