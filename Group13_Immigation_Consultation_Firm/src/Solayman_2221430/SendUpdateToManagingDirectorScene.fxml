@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.SendUpdateToManagingDirectorSceneController">
+<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Solayman_2221430.SendUpdateToManagingDirectorSceneController">
    <children>
       <Label layoutX="51.0" layoutY="35.0" prefHeight="31.0" prefWidth="80.0" text="Month :" />
       <DatePicker fx:id="dateDatePicker" layoutX="160.0" layoutY="79.0" prefHeight="25.0" prefWidth="150.0" />
