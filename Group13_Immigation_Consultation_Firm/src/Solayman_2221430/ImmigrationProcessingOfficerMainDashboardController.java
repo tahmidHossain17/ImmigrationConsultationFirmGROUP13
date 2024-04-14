@@ -4,17 +4,11 @@
  */
 package Solayman_2221430;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
-import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -32,32 +26,11 @@ public class ImmigrationProcessingOfficerMainDashboardController implements Init
     }    
 
     @FXML
-    private void openUpdatePolicySceneOnMouseClick(ActionEvent event)  throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PolicyUpdateScene.fxml"));
-        Parent parent = fxmlLoader.load();
-
-    
-        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
-        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
-
-        Stage stage = new Stage();
-//        stage.setTitle("Case");
-        stage.setScene(new Scene(parent, prefWidth, prefHeight));
-        stage.show();
+    private void openUpdatePolicySceneOnMouseClick(ActionEvent event) {
     }
+
     @FXML
-    private void openVerifyDocumentOnMouseClick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("VerifyDoocumentScene.fxml"));
-        Parent parent = fxmlLoader.load();
-
-    
-        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
-        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
-
-        Stage stage = new Stage();
-        stage.setTitle("Case");
-        stage.setScene(new Scene(parent, prefWidth, prefHeight));
-        stage.show();
+    private void openVerifyDocumentOnMouseClick(ActionEvent event) {
     }
 
     @FXML

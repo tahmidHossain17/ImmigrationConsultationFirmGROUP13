@@ -45,8 +45,6 @@ public class RequestForBookingTicketSceneController implements Initializable {
 
     ArrayList<AvaiableFlight> flightList;
 //    ArrayList<TicketRequest> requestList;
-    @FXML
-    private ComboBox<?> selectedQuantityComboBox;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

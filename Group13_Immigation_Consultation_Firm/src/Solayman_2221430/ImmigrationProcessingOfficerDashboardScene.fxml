@@ -4,7 +4,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Solayman_2221430.ImmigrationProcessingOfficerDashboardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.ImmigrationProcessingOfficerDashboardSceneController">
    <children>
       <ComboBox fx:id="menuComboBox" layoutY="-1.0" prefHeight="20.0" prefWidth="90.0" promptText="Menu" />
       <Button fx:id="logoutButton" layoutX="477.0" layoutY="323.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="75.0" text="Logout" />
