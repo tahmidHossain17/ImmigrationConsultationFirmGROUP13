@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="475.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.KnowAboutYourDestinationSceneController">
+<AnchorPane id="AnchorPane" prefHeight="475.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Solayman_2221430.KnowAboutYourDestinationSceneController">
    <children>
       <Label layoutX="48.0" layoutY="341.0" prefHeight="90.0" prefWidth="533.0" text="Select any country to know about the country!">
          <font>

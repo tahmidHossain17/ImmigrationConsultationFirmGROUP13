@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
@@ -22,7 +23,7 @@ import javafx.stage.Stage;
  * @author MSI
  */
 public class ReceptionistDashboardController implements Initializable {
-
+    Stage stg;    
     /**
      * Initializes the controller class.
      */
@@ -37,17 +38,21 @@ public class ReceptionistDashboardController implements Initializable {
 
     @FXML
     private void logoutbuttononclick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainPKG/Login.fxml"));
-        Parent parent = fxmlLoader.load();
+       
+        Parent parent=FXMLLoader.load(getClass().getResource("/mainPKG/Login.fxml"));
+        
+        Scene scn=new Scene(parent);
+        
+        stg=(Stage)((Node)event.getSource()).getScene().getWindow();
+        
+        stg.setScene(scn);
+        stg.show();
+        
+        
+        
+        
 
-        // Retrieve preferred height and width from the loaded parent node
-        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
-        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
-
-        Stage stage = new Stage();
-        stage.setTitle("login");
-        stage.setScene(new Scene(parent, prefWidth, prefHeight));
-        stage.show();  
+            
     }
 
     @FXML
@@ -149,7 +154,19 @@ public class ReceptionistDashboardController implements Initializable {
     }
 
     @FXML
-    private void TermsAndPolicyOnMouseClick(ActionEvent event) {
+    private void TermsAndPolicyOnMouseClick(ActionEvent event) throws IOException {
+              FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TermsAndPolicy.fxml"));
+        Parent parent = fxmlLoader.load();
+
+    
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+        stage.setTitle("Case");
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();
+        
     }
 
     

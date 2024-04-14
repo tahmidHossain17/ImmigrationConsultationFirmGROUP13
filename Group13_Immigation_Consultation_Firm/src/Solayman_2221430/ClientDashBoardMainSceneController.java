@@ -12,7 +12,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.Scene;
+import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -21,70 +23,136 @@ import javafx.scene.layout.BorderPane;
  */
 public class ClientDashBoardMainSceneController implements Initializable {
 
-    @FXML
-    private BorderPane borderpane;
-
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        try {
-                Parent parent = FXMLLoader.load(getClass().getResource("ClientDashBoard.fxml"));
-                borderpane.setCenter(parent);    
-            } catch (IOException ex) {
-//                Logger.getLogger(User_05_MainDashboardController.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        // TODO
     }    
 
     @FXML
     private void openFixAppointmentSceneOnMouseClick(ActionEvent event)throws IOException {
-        
-        Parent parent= FXMLLoader.load(getClass().getResource("FixAppointmentScene.fxml"));
-        borderpane.setCenter(parent);
-        
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FixAppointmentScene.fxml"));
+        Parent parent = fxmlLoader.load();
+
+    
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+//        stage.setTitle("Case");
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();
     }
 
     @FXML
     private void openEligibilityToApplySceneOnMouseClick(ActionEvent event)throws IOException {
-        
-        Parent parent= FXMLLoader.load(getClass().getResource("EligibilityToApplyScene.fxml"));
-        borderpane.setCenter(parent);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("EligibilityToApplyScene.fxml"));
+        Parent parent = fxmlLoader.load();
+
+    
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+//        stage.setTitle("Case");
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();
     }
 
     @FXML
     private void openBookAccomodationSceneOnMouseClick(ActionEvent event)throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("BookAccomodationScene.fxml"));
-        borderpane.setCenter(parent);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BookAccomodationScene.fxml"));
+        Parent parent = fxmlLoader.load();
+
+    
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+//        stage.setTitle("Case");
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();
     }
 
     @FXML
     private void openRequestForBookingATicketSceneOnMouseClick(ActionEvent event)throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("RequestForBookingTicketScene.fxml"));
-        borderpane.setCenter(parent);
-        
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RequestForBookingTicketScene.fxml"));
+        Parent parent = fxmlLoader.load();
+
+    
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+//        stage.setTitle("Case");
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();
     }
 
     @FXML
     private void openKnowAboutYourDestinationSceneOnMouseClick(ActionEvent event)throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("KnowABoutYourDestinationScene.fxml"));
-        borderpane.setCenter(parent);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("KnowABoutYourDestinationScene.fxml"));
+        Parent parent = fxmlLoader.load();
+
+    
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+//        stage.setTitle("Case");
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();
     }
 
     @FXML
     private void openReviewsSceneOnMouseClick(ActionEvent event)throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("ReviewsScene.fxml"));
-        borderpane.setCenter(parent);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ReviewsScene.fxml"));
+        Parent parent = fxmlLoader.load();
+
+    
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+//        stage.setTitle("Case");
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();
     }
 
     @FXML
-    private void openApplyForBankSolvencySceneOnMouseClick(ActionEvent event)throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("ApplyForBankSolvencyScene.fxml"));
-        borderpane.setCenter(parent);
+    private void openApplyForBankSolvencySceneOnMouseClick(ActionEvent event)throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ApplyForBankSolvencyScene.fxml"));
+        Parent parent = fxmlLoader.load();
+
+    
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+//        stage.setTitle("Case");
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();
     }
 
     @FXML
-    private void closeWindowOnMouseClick(ActionEvent event) {
+    private void addProfileInfoButtonOnMouseClick(ActionEvent event)throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ApplyForBankSolvencyScene.fxml"));
+        Parent parent = fxmlLoader.load();
+
+    
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+//        stage.setTitle("Case");
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();
+    }
+
+    @FXML
+    private void logoutbuttononclick(ActionEvent event) {
     }
     
 }
