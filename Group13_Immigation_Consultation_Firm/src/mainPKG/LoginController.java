@@ -100,14 +100,14 @@ public class LoginController implements Initializable {
                 Scene scene = new Scene(root);
                 currentStage.setScene(scene);
             }
-            if (userType.equals("Client")) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Solayman_2221430/ClientDashBoardMainScene.fxml"));
+             if (userType.equals("IT Officer")) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/prosanto2010271/IT Officer.fxml"));
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
                 currentStage.setScene(scene);
             }
-            if (userType.equals("Immigration Processing officer")) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Solayman_2221430/ImmigrationProcessingOfficerMainDashboard.fxml"));
+            if (userType.equals("Managing Director")) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/prosanto2010271/ManagingDirector.fxml"));
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
                 currentStage.setScene(scene);

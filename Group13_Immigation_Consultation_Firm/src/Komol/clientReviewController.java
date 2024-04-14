@@ -52,5 +52,9 @@ public class clientReviewController implements Initializable {
     @FXML
     private void ratingsbuttononclick(ActionEvent event) {
     }
+
+    @FXML
+    private void logoutbuttononclick(ActionEvent event) {
+    }
     
 }

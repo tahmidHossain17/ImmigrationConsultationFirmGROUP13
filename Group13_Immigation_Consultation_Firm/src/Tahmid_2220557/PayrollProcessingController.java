@@ -4,7 +4,10 @@
  */
 package Tahmid_2220557;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -61,11 +64,49 @@ public class PayrollProcessingController implements Initializable {
 
     @FXML
     private void saveRecordOnMouseClick(ActionEvent event) {
-    }
+        FileOutputStream fos = null;
+        ObjectOutputStream oos = null;
+        File f = null;
+        py= new Payroll(employeeTypeCombobox.getValue(),nameTextField.getText(),Integer.parseInt(taxTextField.getText()),Integer.parseInt(basicSalaryTextField.getText()),Float.parseFloat(hoursTextField.getText()),Integer.parseInt(deductionComboBox.getValue()));
+        
+        System.out.println(py);
+
+        try {
+            f = new File("PayrollRecord.bin");
+
+            if (f.exists()) {
+                fos = new FileOutputStream(f, true);
+                oos = new AppendableObjectOutputStream(fos);
+            } else {
+                fos = new FileOutputStream(f);
+                oos = new ObjectOutputStream(fos);
+            }
+
+            oos.writeObject(py); // Serialize only the Paymentslip object
+            System.out.println("Written successful");
+
+//            dueLabel.setText("Amount Due is " + Float.toString(slip.getDueAmount()) + " Taka");
+
+        } catch (Exception ex) {
+            ex.printStackTrace(); // Print stack trace to identify any exceptions
+        } finally {
+            try {
+                if (oos != null) {
+                    oos.close();
+                }
+                if (fos != null) {
+                    fos.close();
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace(); // Handle IO exceptions
+            }
+        }
+
+        }
 
     @FXML
     private void backOnMOuseClick(ActionEvent event) throws IOException {
-        Parent backButton= FXMLLoader.load(getClass().getResource("AccountantMainDashboard.fxml"));
+        Parent backButton= FXMLLoader.load(getClass().getResource("AccountantDashboard.fxml"));
         Scene scene1=new Scene(backButton);
         
         sg=(Stage)((Node)event.getSource()).getScene().getWindow();

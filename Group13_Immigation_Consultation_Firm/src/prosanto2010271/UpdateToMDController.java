@@ -13,6 +13,8 @@ import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -52,36 +54,46 @@ public class UpdateToMDController implements Initializable {
          updateList.add( new Update(nameTextField.getText(),Integer.parseInt(idTextField.getText()), selectDateDatePicker.getValue(),
                 detailsTextField.getText()));
    
-             try{
-                FileOutputStream fos = new FileOutputStream("UpdateToMDObject.bin", true);
-                ObjectOutputStream oos = new ObjectOutputStream(fos);
-                for(Update s: updateList){
+             
+        File f = null;
+        FileOutputStream fos = null;      
+        ObjectOutputStream oos = null;
+        
+        try {
+            f = new File("UpdateToMDObject.bin");
+            if(f.exists()){
+                fos = new FileOutputStream(f,true);
+                oos = new AppendableObjectOutputStream(fos);                
+            }
+            else{
+                fos = new FileOutputStream(f);
+                oos = new ObjectOutputStream(fos);               
+            }
+            
+            for(Update s: updateList){
                     oos.writeObject(s);
-                oos.close();
+                //oos.close();
                     }
-             }
-            catch(Exception e){
-                //SHOW e.toString() IN AN ALERT
-            } 
+
+        } catch (IOException ex) {
+            Logger.getLogger(UpdateToMDController.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if(oos != null) oos.close();
+            } catch (IOException ex) {
+                Logger.getLogger(UpdateToMDController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } 
+         
+     
              FileWriter fw = null;
             try {
-                //write code to dump studArr in Stud.txt
-                //use FileWriter
-                File f = new File("studText.txt");
-                
-                //FileWriter fw = new FileWriter(f);
-                if(f.exists())
-                    //fw = new FileWriter("studText.txt",true);
-                    fw = new FileWriter(f,true);
-                else 
-                    //fw = new FileWriter(f);
-                    fw = new FileWriter("UpdateToMDObject.txt");
+               
+                 fw = new FileWriter("UpdateToMDObject.txt");
                 String str="";
                 for(Update s: updateList){
                     str += s.getName()+","+ s.getId()+","+s.getDate()+","+s.getDetails()+"\n";
-                    //str += s.toString(); 
-                    //if toString is overridden to return
-                    //return id+","+name+","+cgpa+"\n"
+              
                 }
                 fw.write(str);  //fw.write(s.toString());
                 fw.close();

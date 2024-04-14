@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="mdBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.ManagingDirectorController">
+<BorderPane fx:id="mdBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prosanto2010271.ManagingDirectorController">
    <top>
       <MenuBar prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: #b4a7d6;" BorderPane.alignment="CENTER">
          <menus>
@@ -76,7 +76,7 @@
                   <InnerShadow />
                </effect>
             </Button>
-            <Button layoutX="11.0" layoutY="24.0" mnemonicParsing="false" onAction="#appointmentButtonOnMouseClick" prefHeight="40.0" prefWidth="182.0" style="-fx-background-color: #c9d6a7;" text="Appointment schedule">
+            <Button layoutX="11.0" layoutY="24.0" mnemonicParsing="false" onAction="#termsAndPolicyButtonOnMouseClick" prefHeight="40.0" prefWidth="182.0" style="-fx-background-color: #c9d6a7;" text="Terms and Policy">
                <effect>
                   <InnerShadow />
                </effect>

@@ -17,27 +17,19 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 import javafx.scene.control.TableColumn;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Komol
- */
 public class CaseRequestVisibilityController implements Initializable {
 
     @FXML
-    private TableColumn<?, ?> clientnameoncolumn;
+    private TableColumn<Caserequest, String> clientnameoncolumn;
     @FXML
-    private TableColumn<?, ?> numberoncolumn;
+    private TableColumn<Caserequest, String> numberoncolumn;
     @FXML
-    private TableColumn<?, ?> detailsoncolumn;
+    private TableColumn<Caserequest, String> detailsoncolumn;
     @FXML
-    private TableColumn<?, ?> typeoncolumn;
+    private TableColumn<Caserequest, String> typeoncolumn;
     @FXML
-    private TableColumn<?, ?> genderoncolumn;
+    private TableColumn<Caserequest, String> genderoncolumn;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -45,7 +37,21 @@ public class CaseRequestVisibilityController implements Initializable {
 
     @FXML
     private void loadinfobuttononclick(ActionEvent event) {
+        // Create sample CaseRequest instances
+        Caserequest caseRequest1 = new Caserequest("komol", "123456", "Government issu", "special", "Male");
+        Caserequest caseRequest2 = new Caserequest("Joy", "789012", "student", "random", "male");
+
+        // Write CaseRequest instances to file
+        caseRequest1.writeToFile("caseRequest1.bin");
+        caseRequest2.writeToFile("caseRequest2.bin");
+
+        // Read CaseRequest instances from file (optional)
+        Caserequest retrievedCaseRequest1 = Caserequest.readFromFile("caseRequest1.bin");
+        Caserequest retrievedCaseRequest2 = Caserequest.readFromFile("caseRequest2.bin");
+
+        // You can use the retrievedCaseRequest objects as needed
     }
+
 
     @FXML
     private void logoutbuttononclick(ActionEvent event)throws IOException {

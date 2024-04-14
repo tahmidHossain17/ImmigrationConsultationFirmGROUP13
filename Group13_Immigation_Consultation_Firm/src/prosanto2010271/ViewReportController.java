@@ -28,6 +28,7 @@ public class ViewReportController implements Initializable {
 
     @FXML
     private TableView<Update> reportTableView;
+    @FXML
     private TableColumn<Update, String> nameTableColumn;
     @FXML
     private TableColumn<Update, Integer> idTableColumn;
@@ -37,8 +38,7 @@ public class ViewReportController implements Initializable {
     private TableColumn<Update, String> detailsTableColumn;
     
     private ArrayList<Update> updatelist  = new ArrayList<Update>();
-    @FXML
-    private TableColumn<?, ?> nameTablecolumn;
+
     
     
     /**
@@ -47,45 +47,49 @@ public class ViewReportController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-//        FileInputStream fis = null;
-//            DataInputStream dis = null;
-//            try{
-//                //FileInputStream fis = new FileInputStream("studData.bin");
-//                File f = new File("UpdateToMDObject.bin");
-//                fis = new FileInputStream(f);
-//                dis = new DataInputStream(fis);
-//                
-////                while(true){
-////                    //outputTxtArea.appendText(
-////                        //"Id is: " + dis.readInt() +
-////                        //", Name is: " + dis.readUTF() +
-////                        //", Cgpa is: " + dis.readFloat() + "\n"
-////                    );
-////                }
-//                //dis.close();
-//            }
-//            catch(Exception e){
-//                //Alert a = new Alert(AlertType.INFORMATION);
-//                //a.setContentText(e.toString());
-//                //a.setContentText("Content from Data file is loaded successfully.");
-//                //a.showAndWait();                
-//                dis.close();
-//                //SHOW e.toString() IN AN ALERT
-//            }          
-        
-                
-        
-         
         nameTableColumn.setCellValueFactory(new PropertyValueFactory<Update,String>("name"));
         idTableColumn.setCellValueFactory(new PropertyValueFactory<Update,Integer>("id"));
         dateTableColumn.setCellValueFactory(new PropertyValueFactory<Update,LocalDate>("date"));
         detailsTableColumn.setCellValueFactory(new PropertyValueFactory<Update,String>("details"));
         
+        ObjectInputStream ois=null;
+         try {
+             Update u;
+             //FileInputStream fis = new FileInputStream("studObjects.bin");
+             //ois = new ObjectInputStream(fis);
+             ois = new ObjectInputStream(new FileInputStream("UpdateToMDObject.bin"));
+             
         
-        for(Update s: updatelist ){
-            reportTableView.getItems().add(s);
+            
+            //int[] arr={1,2,3};
+            //System.out.println(arr[3]);
+            while(true){
+                u = (Update) ois.readObject();
+                reportTableView.getItems().add(u);
+                
+                
+                
+            }
+            //ois.close();
+                       
+        }
+        catch(RuntimeException e){
+            e.printStackTrace();
+             //
+        }
+        catch (Exception ex) {
+           
+            try {
+                System.out.println(ex.toString());
+                if(ois!=null)
+                    ois.close();
+            } catch (IOException ex1) { 
+            
+            }           
+        }
+    }
         
-    }    
-    
-}
-}
+    }
+        
+
+

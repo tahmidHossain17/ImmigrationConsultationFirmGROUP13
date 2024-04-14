@@ -71,7 +71,7 @@ public class ITOfficerController implements Initializable {
 
     @FXML
     private void allowanceButtonMouseOnClick(ActionEvent event) {
-        loadUi("Allowance Request");
+        loadUi("/Tahmid_2220557/R_AllowanceRequest");
     }
 
     @FXML
