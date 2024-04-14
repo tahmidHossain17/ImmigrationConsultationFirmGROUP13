@@ -90,9 +90,13 @@ public class ManagingDirectorController implements Initializable {
         
     }
 
-    @FXML
     private void appointmentButtonOnMouseClick(ActionEvent event) {
         loadUi("Appointment schedule");
+    }
+
+    @FXML
+    private void termsAndPolicyButtonOnMouseClick(ActionEvent event) {
+        loadUi("MD_Terms and Policy");
     }
     
 }
