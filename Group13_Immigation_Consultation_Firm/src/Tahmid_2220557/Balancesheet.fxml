@@ -19,33 +19,38 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ComboBox layoutX="113.0" layoutY="97.0" prefHeight="25.0" prefWidth="121.0" />
+      <ComboBox fx:id="monthComboBox" layoutX="113.0" layoutY="97.0" prefHeight="25.0" prefWidth="121.0" />
       <Label layoutX="35.0" layoutY="142.0" prefHeight="17.0" prefWidth="65.0" style="-fx-background-color: #D1F2EB;" text="Asset Type:">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ComboBox layoutX="113.0" layoutY="138.0" prefHeight="25.0" prefWidth="121.0" />
-      <Label layoutX="35.0" layoutY="226.0" prefHeight="17.0" prefWidth="65.0" style="-fx-background-color: #D1F2EB;" text="Liabilities">
+      <ComboBox fx:id="assetComboBox" layoutX="113.0" layoutY="138.0" prefHeight="25.0" prefWidth="121.0" />
+      <Label layoutX="39.0" layoutY="298.0" prefHeight="17.0" prefWidth="65.0" style="-fx-background-color: #D1F2EB;" text="Liabilities">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <TextField layoutX="114.0" layoutY="179.0" prefHeight="25.0" prefWidth="121.0" />
-      <Label layoutX="35.0" layoutY="183.0" prefHeight="17.0" prefWidth="65.0" style="-fx-background-color: #D1F2EB;" text="Asset">
+      <TextField fx:id="assetTextField" layoutX="118.0" layoutY="251.0" prefHeight="25.0" prefWidth="121.0" />
+      <Label layoutX="39.0" layoutY="255.0" prefHeight="17.0" prefWidth="65.0" style="-fx-background-color: #D1F2EB;" text="Asset">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <TextField layoutX="114.0" layoutY="222.0" prefHeight="25.0" prefWidth="121.0" />
-      <Label layoutX="21.0" layoutY="270.0" prefHeight="17.0" prefWidth="93.0" style="-fx-background-color: #D1F2EB;" text="Owner's Equity">
+      <TextField fx:id="liabilitiesTextField" layoutX="118.0" layoutY="294.0" prefHeight="25.0" prefWidth="121.0" />
+      <Label layoutX="25.0" layoutY="342.0" prefHeight="17.0" prefWidth="93.0" style="-fx-background-color: #D1F2EB;" text="Owner's Equity">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <TextField layoutX="128.0" layoutY="266.0" prefHeight="25.0" prefWidth="121.0" />
-      <Button layoutX="292.0" layoutY="110.0" mnemonicParsing="false" text="Generate Balance sheet" />
-      <Button layoutX="292.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="Save as PDF" />
+      <TextField fx:id="ownerEquityTextField" layoutX="132.0" layoutY="338.0" prefHeight="25.0" prefWidth="121.0" />
+      <Button layoutX="292.0" layoutY="110.0" mnemonicParsing="false" onAction="#generateBalanceSheetOnMouseClick" text="Generate Balance sheet" />
+      <Button layoutX="292.0" layoutY="159.0" mnemonicParsing="false" onAction="#saveOnMouseClick" prefHeight="25.0" prefWidth="130.0" text="Save" />
       <Button layoutX="436.0" layoutY="350.0" mnemonicParsing="false" onAction="#BackButtonOnMouseClick" prefHeight="25.0" prefWidth="130.0" text="Back" />
+      <Label layoutX="25.0" layoutY="210.0" prefHeight="25.0" prefWidth="275.0" text="Enter the amounts:">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

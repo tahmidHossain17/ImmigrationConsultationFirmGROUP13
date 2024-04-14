@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tahmid_2220557.BalanceSheetOutputController">
+   <children>
+      <Label layoutX="198.0" layoutY="14.0" prefHeight="36.0" prefWidth="218.0" text="Balance Sheet ">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="monthLabel" layoutX="191.0" layoutY="60.0" prefHeight="36.0" prefWidth="218.0" text="As at month,year" />
+      <Label layoutX="40.0" layoutY="137.0" prefHeight="38.0" prefWidth="115.0" text="Items">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="261.0" layoutY="137.0" prefHeight="38.0" prefWidth="115.0" text="Amount">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="192.0" prefHeight="36.0" prefWidth="115.0" text="Asset">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="assetLabel" layoutX="247.0" layoutY="192.0" prefHeight="36.0" prefWidth="138.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="251.0" prefHeight="36.0" prefWidth="115.0" text="Liabitlities">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="LiabitlitiesLabel" layoutX="250.0" layoutY="255.0" prefHeight="36.0" prefWidth="138.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="305.0" prefHeight="36.0" prefWidth="115.0" text="Owners Equity">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="OELabel" layoutX="247.0" layoutY="305.0" prefHeight="36.0" prefWidth="138.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="assetFinal" layoutX="402.0" layoutY="215.0" prefHeight="36.0" prefWidth="138.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="OEfinalLabel" layoutX="409.0" layoutY="305.0" prefHeight="36.0" prefWidth="138.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Line endX="486.0" layoutX="106.0" layoutY="294.0" startX="-100.0" />
+   </children>
+</AnchorPane>

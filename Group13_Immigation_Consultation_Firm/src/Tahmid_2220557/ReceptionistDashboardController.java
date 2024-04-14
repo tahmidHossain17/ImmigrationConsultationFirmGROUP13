@@ -154,7 +154,19 @@ public class ReceptionistDashboardController implements Initializable {
     }
 
     @FXML
-    private void TermsAndPolicyOnMouseClick(ActionEvent event) {
+    private void TermsAndPolicyOnMouseClick(ActionEvent event) throws IOException {
+              FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TermsAndPolicy.fxml"));
+        Parent parent = fxmlLoader.load();
+
+    
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+        stage.setTitle("Case");
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();
+        
     }
 
     
