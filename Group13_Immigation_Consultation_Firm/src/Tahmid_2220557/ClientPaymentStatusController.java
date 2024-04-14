@@ -30,8 +30,6 @@ public class ClientPaymentStatusController implements Initializable {
     @FXML
     private ComboBox<?> NameComboBox;
     @FXML
-    private TextField PhoneTextField;
-    @FXML
     private TableView<?> transactionTableView;
     @FXML
     private TableColumn<?, ?> nameTableColumn;
@@ -50,6 +48,8 @@ public class ClientPaymentStatusController implements Initializable {
      * Initializes the controller class.
      */
     Stage sg;
+    @FXML
+    private TextField idTextField;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -73,6 +73,10 @@ public class ClientPaymentStatusController implements Initializable {
 
     @FXML
     private void saveRecordOnMouseClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void loadButtonOnMouseClick(ActionEvent event) {
     }
     
 }

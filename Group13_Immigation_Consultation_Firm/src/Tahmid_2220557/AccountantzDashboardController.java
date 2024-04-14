@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
@@ -26,23 +27,31 @@ public class AccountantzDashboardController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    Stage stg;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
     @FXML
     private void logoutbuttononclick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainPKG/Login.fxml"));
-        Parent parent = fxmlLoader.load();
-
+//        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainPKG/Login.fxml"));
+//        Parent parent = fxmlLoader.load();
+        Parent parent=FXMLLoader.load(getClass().getResource("/mainPKG/Login.fxml"));
         
-        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
-        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
-
-        Stage stage = new Stage();
-        stage.setTitle("login");
-        stage.setScene(new Scene(parent, prefWidth, prefHeight));
-        stage.show();  
+        Scene scene1=new Scene(parent);
+        
+        stg=(Stage)((Node)event.getSource()).getScene().getWindow();
+        
+        stg.setScene(scene1);
+        stg.show();
+        
+//        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+//        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+//
+//        Stage stage = new Stage();
+//        stage.setTitle("login");
+//        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+//        stage.show();  
     }
 
     @FXML
@@ -55,7 +64,7 @@ public class AccountantzDashboardController implements Initializable {
         double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
 
         Stage stage = new Stage();
-        stage.setTitle("Case");
+   
         stage.setScene(new Scene(parent, prefWidth, prefHeight));
         stage.show();
     }
@@ -70,7 +79,7 @@ public class AccountantzDashboardController implements Initializable {
         double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
 
         Stage stage = new Stage();
-        stage.setTitle("Case");
+      
         stage.setScene(new Scene(parent, prefWidth, prefHeight));
         stage.show();
     }
@@ -85,7 +94,7 @@ public class AccountantzDashboardController implements Initializable {
         double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
 
         Stage stage = new Stage();
-        stage.setTitle("Case");
+        
         stage.setScene(new Scene(parent, prefWidth, prefHeight));
         stage.show();
     }
@@ -100,7 +109,7 @@ public class AccountantzDashboardController implements Initializable {
         double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
 
         Stage stage = new Stage();
-        stage.setTitle("Case");
+       
         stage.setScene(new Scene(parent, prefWidth, prefHeight));
         stage.show();
     }
@@ -115,7 +124,7 @@ public class AccountantzDashboardController implements Initializable {
         double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
 
         Stage stage = new Stage();
-        stage.setTitle("Case");
+      
         stage.setScene(new Scene(parent, prefWidth, prefHeight));
         stage.show();
     }
@@ -130,7 +139,7 @@ public class AccountantzDashboardController implements Initializable {
         double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
 
         Stage stage = new Stage();
-        stage.setTitle("Case");
+  
         stage.setScene(new Scene(parent, prefWidth, prefHeight));
         stage.show();
     }
@@ -145,7 +154,7 @@ public class AccountantzDashboardController implements Initializable {
         double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
 
         Stage stage = new Stage();
-        stage.setTitle("Case");
+     
         stage.setScene(new Scene(parent, prefWidth, prefHeight));
         stage.show();
     }
@@ -160,7 +169,7 @@ public class AccountantzDashboardController implements Initializable {
         double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
 
         Stage stage = new Stage();
-        stage.setTitle("Case");
+        
         stage.setScene(new Scene(parent, prefWidth, prefHeight));
         stage.show();
     }
