@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.FixAppointmentSceneController">
+<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Solayman_2221430.FixAppointmentSceneController">
    <children>
       <Label layoutX="23.0" layoutY="58.0" prefHeight="25.0" prefWidth="114.0" text="Reason for Applying: " />
       <ComboBox fx:id="reasonForApplyingComboBox" layoutX="150.0" layoutY="54.0" prefWidth="150.0" />

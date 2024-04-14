@@ -107,7 +107,7 @@ public class LoginController implements Initializable {
                 currentStage.setScene(scene);
             }
             if (userType.equals("Immigration Processing officer")) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Solayman_2221430/.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Solayman_2221430/ImmigrationProcessingOfficerMainDashboard.fxml"));
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
                 currentStage.setScene(scene);
