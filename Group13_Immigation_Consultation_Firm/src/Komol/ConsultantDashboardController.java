@@ -30,7 +30,7 @@ public class ConsultantDashboardController implements Initializable {
 
     @FXML
     private void applicationformreviewbuttononclick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("application_form_review.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ApplicationFormReview.fxml"));
         Parent parent = fxmlLoader.load();
 
         // Retrieve preferred height and width from the loaded parent node
@@ -47,7 +47,7 @@ public class ConsultantDashboardController implements Initializable {
 
     @FXML
     private void clientcurrentstatusbuttononclick(ActionEvent event) throws IOException {
-         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Client_current_status.fxml"));
+         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ClientCurrentStatus.fxml"));
         Parent parent = fxmlLoader.load();
 
         // Retrieve preferred height and width from the loaded parent node
@@ -64,7 +64,7 @@ public class ConsultantDashboardController implements Initializable {
 
     @FXML
     private void allowancerequestbuttononclick(ActionEvent event) throws IOException {
-         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Allowance Request.fxml"));
+         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Tahmid_2220557/R_AllowanceRequest.fxml"));
         Parent parent = fxmlLoader.load();
 
         // Retrieve preferred height and width from the loaded parent node
@@ -81,7 +81,7 @@ public class ConsultantDashboardController implements Initializable {
 
     @FXML
     private void clientreviewbuttonclick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("client Review.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ClientReview.fxml"));
         Parent parent = fxmlLoader.load();
 
         // Retrieve preferred height and width from the loaded parent node
@@ -96,7 +96,7 @@ public class ConsultantDashboardController implements Initializable {
 
     @FXML
     private void complainitbuttononclick(ActionEvent event) throws IOException {
-         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Complain IT.fxml"));
+         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ComplainIT.fxml"));
         Parent parent = fxmlLoader.load();
 
         // Retrieve preferred height and width from the loaded parent node
@@ -112,7 +112,7 @@ public class ConsultantDashboardController implements Initializable {
 
     @FXML
     private void updatetermsandpolicybuttononclick(ActionEvent event)throws IOException {
-         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Update terms and feedback.fxml"));
+         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Updatetermsandpolicyfeedback.fxml"));
         Parent parent = fxmlLoader.load();
 
         // Retrieve preferred height and width from the loaded parent node
@@ -166,7 +166,7 @@ public class ConsultantDashboardController implements Initializable {
 
     @FXML
     private void appointmentchackingbuttononclick(ActionEvent event)  throws IOException {
-         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("appointmentchacking.fxml"));
+         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Appointment.fxml"));
         Parent parent = fxmlLoader.load();
 
         // Retrieve preferred height and width from the loaded parent node

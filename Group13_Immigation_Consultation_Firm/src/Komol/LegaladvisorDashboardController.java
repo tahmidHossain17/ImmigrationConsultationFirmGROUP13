@@ -74,8 +74,8 @@ public class LegaladvisorDashboardController implements Initializable {
     }
 
     @FXML
-    private void updatetermsandpolicybuttononclick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Update terms and policy.fxml"));
+    private void updatetermsandpolicybuttononclick(ActionEvent event)  throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Updatetermsandpolicyfeedback.fxml"));
         Parent parent = fxmlLoader.load();
 
         // Retrieve preferred height and width from the loaded parent node
@@ -83,10 +83,13 @@ public class LegaladvisorDashboardController implements Initializable {
         double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
 
         Stage stage = new Stage();
-        stage.setTitle("Update");
+        stage.setTitle("Report");
         stage.setScene(new Scene(parent, prefWidth, prefHeight));
-        stage.show(); 
+        stage.show();  
     }
+
+         
+    
 
     @FXML
     private void appointmentbuttononclick(ActionEvent event) throws IOException {
@@ -105,7 +108,7 @@ public class LegaladvisorDashboardController implements Initializable {
 
     @FXML
     private void viewcaseratiobuttononclick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view_case_ratio_chart.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("viewcaseratiochart.fxml"));
         Parent parent = fxmlLoader.load();
 
         // Retrieve preferred height and width from the loaded parent node
@@ -136,7 +139,7 @@ public class LegaladvisorDashboardController implements Initializable {
 
     @FXML
     private void allowancerequestbuttononclick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Allowance Request.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Tahmid_2220557/R_AllowanceRequest.fxml"));
         Parent parent = fxmlLoader.load();
 
         // Retrieve preferred height and width from the loaded parent node
