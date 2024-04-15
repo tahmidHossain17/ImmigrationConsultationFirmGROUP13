@@ -86,7 +86,7 @@ public class FixAppointmentController implements Initializable {
             oos.writeObject(app);
             System.out.println("Write Object Successful");
 //            OutputLabel.setText("Your Record Has Been saved \n"+att.toString());
-            showNotifyAlert("Notification", "Attendence Submitted");
+            showNotifyAlert("Notification", "Appointment Booked");
             oos.close();
         
         
@@ -100,12 +100,14 @@ public class FixAppointmentController implements Initializable {
 
     @FXML
     private void backButtonOnMouseClick(ActionEvent event) throws IOException {
-                Parent backButton= FXMLLoader.load(getClass().getResource("R_ReceptionistMainDashboard.fxml"));
-        Scene scene1=new Scene(backButton);
+       
+        Parent parent=FXMLLoader.load(getClass().getResource("/mainPKG/Login.fxml"));
+        
+        Scene scn=new Scene(parent);
         
         sg=(Stage)((Node)event.getSource()).getScene().getWindow();
         
-        sg.setScene(scene1);
+        sg.setScene(scn);
         sg.show();
     }
     

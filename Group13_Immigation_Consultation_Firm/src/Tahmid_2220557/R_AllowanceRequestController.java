@@ -144,14 +144,14 @@ public class R_AllowanceRequestController implements Initializable {
 
     @FXML
     private void backOnMouseClick(ActionEvent event) throws IOException {
-        Parent backButton= FXMLLoader.load(getClass().getResource("/mainPKG/Login.fxml"));
-        Scene scene1=new Scene(backButton);
+       
+        Parent parent=FXMLLoader.load(getClass().getResource("/mainPKG/Login.fxml"));
         
-      
+        Scene scn=new Scene(parent);
         
         sg=(Stage)((Node)event.getSource()).getScene().getWindow();
         
-        sg.setScene(scene1);
+        sg.setScene(scn);
         sg.show();
     }
 

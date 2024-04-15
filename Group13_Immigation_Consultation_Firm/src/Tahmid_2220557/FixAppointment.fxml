@@ -38,7 +38,7 @@
             <Font size="29.0" />
          </font>
       </Button>
-      <Button layoutX="411.0" layoutY="317.0" mnemonicParsing="false" onAction="#backButtonOnMouseClick" prefHeight="39.0" prefWidth="114.0" text="Back" />
+      <Button layoutX="411.0" layoutY="317.0" mnemonicParsing="false" onAction="#backButtonOnMouseClick" prefHeight="39.0" prefWidth="114.0" text="Logout" />
       <Label layoutX="37.0" layoutY="254.0" prefHeight="20.0" prefWidth="64.0" style="-fx-background-color: #F0FFF0;" text="Phone">
          <font>
             <Font size="16.0" />

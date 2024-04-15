@@ -72,7 +72,7 @@ public class ReceptionistDashboardController implements Initializable {
 
     @FXML
     private void clientProfileViewOnMouseClick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Balancesheet.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Solayman_2221430/EditProfileDetailsScene.fxml"));
         Parent parent = fxmlLoader.load();
 
     
@@ -130,7 +130,7 @@ public class ReceptionistDashboardController implements Initializable {
 
     @FXML
     private void CheckEligibilityOnMouseClick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("R_EligibilityCheckReceptionist.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Solayman_2221430/EligibilityToApplyScene.fxml"));
         Parent parent = fxmlLoader.load();
 
     

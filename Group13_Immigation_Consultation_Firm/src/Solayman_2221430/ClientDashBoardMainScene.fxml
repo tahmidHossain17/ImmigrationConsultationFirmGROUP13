@@ -57,7 +57,7 @@
                               <Font name="Century Schoolbook" size="18.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#addProfileInfoButtonOnMouseClick" prefHeight="57.0" prefWidth="205.0" text="Edit Profile">
+                        <Button mnemonicParsing="false" onAction="#addProfileInfoButtonOnMouseClick" prefHeight="57.0" prefWidth="205.0" text="Fill Profile Info">
                            <font>
                               <Font size="18.0" />
                            </font>

@@ -138,7 +138,7 @@ public class ClientDashBoardMainSceneController implements Initializable {
 
     @FXML
     private void addProfileInfoButtonOnMouseClick(ActionEvent event)throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ApplyForBankSolvencyScene.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("EditProfileDetailsScene.fxml"));
         Parent parent = fxmlLoader.load();
 
     
