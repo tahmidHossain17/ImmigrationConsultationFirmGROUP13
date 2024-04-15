@@ -124,7 +124,18 @@ private void loadinfobuttononclick(ActionEvent event) {
     }
 
     @FXML
-    private void backonbuttononclick(ActionEvent event) {
+    private void backonbuttononclick(ActionEvent event) throws IOException {
+         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LegaladvisorDashboard.fxml"));
+        Parent parent = fxmlLoader.load();
+
+        // Retrieve preferred height and width from the loaded parent node
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+        stage.setTitle("login");
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();   
     }
     
 }

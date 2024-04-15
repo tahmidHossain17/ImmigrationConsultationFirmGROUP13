@@ -35,12 +35,10 @@ public class ComplainITController implements Initializable {
     @FXML
     private DatePicker Dateofbirthdatepicker;
 
-    /**
-     * Initializes the controller class.
-     */
+   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        complaintypecombobox.getItems().addAll("process delays","customer service","ethical concerns");
     }    
 
     @FXML
