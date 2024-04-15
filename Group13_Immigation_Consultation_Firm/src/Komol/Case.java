@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Komol;
 
 import java.io.FileInputStream;
@@ -12,58 +9,71 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-/**
- *
- * @author Komol
- */
+
 public class Case implements Serializable{
     private String clientName;
     private String clientNumber;
-    private String caseCategory;
-    private String legalAdvisor;
-    private LocalDate assignDate;
+    private String Categoriesoncolumn;
+    private String advisornameoncolumn;
+    private LocalDate dateoncolumn;
 
-    public Case(String clientName, String clientNumber, String caseCategory, String legalAdvisor, LocalDate assignDate) {
+    public Case(String clientName, String clientNumber, String Categoriesoncolumn, String advisornameoncolumn, LocalDate dateoncolumn) {
         this.clientName = clientName;
         this.clientNumber = clientNumber;
-        this.caseCategory = caseCategory;
-        this.legalAdvisor = legalAdvisor;
-        this.assignDate = assignDate;
+        this.Categoriesoncolumn = Categoriesoncolumn;
+        this.advisornameoncolumn = advisornameoncolumn;
+        this.dateoncolumn = dateoncolumn;
     }
 
-    // Getters and Setters
 
-    // Write method to serialize Case object to a binary file
-    public void writeToFile(String fileName) {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {
-            oos.writeObject(this);
-            System.out.println("Case object has been written to file: " + fileName);
-        } catch (IOException e) {
-            System.err.println("Error writing Case object to file: " + e.getMessage());
-        }
+    public String getClientName() {
+        return clientName;
     }
 
-    // Read method to deserialize Case object from a binary file
-    public static Case readFromFile(String fileName) {
-        Case retrievedCase = null;
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
-            retrievedCase = (Case) ois.readObject();
-            System.out.println("Case object has been read from file: " + fileName);
-        } catch (IOException | ClassNotFoundException e) {
-            System.err.println("Error reading Case object from file: " + e.getMessage());
-        }
-        return retrievedCase;
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
+    }
+
+    public String getClientNumber() {
+        return clientNumber;
+    }
+
+    public void setClientNumber(String clientNumber) {
+        this.clientNumber = clientNumber;
+    }
+
+    public String getCategoriesoncolumn() {
+        return Categoriesoncolumn;
+    }
+
+    public void setCategoriesoncolumn(String Categoriesoncolumn) {
+        this.Categoriesoncolumn = Categoriesoncolumn;
+    }
+
+    public String getAdvisornameoncolumn() {
+        return advisornameoncolumn;
+    }
+
+    public void setAdvisornameoncolumn(String advisornameoncolumn) {
+        this.advisornameoncolumn = advisornameoncolumn;
+    }
+
+    public LocalDate getDateoncolumn() {
+        return dateoncolumn;
+    }
+
+    public void setDateoncolumn(LocalDate dateoncolumn) {
+        this.dateoncolumn = dateoncolumn;
     }
 
     @Override
     public String toString() {
-        return "Case{" +
-                "clientName='" + clientName + '\'' +
-                ", clientNumber='" + clientNumber + '\'' +
-                ", caseCategory='" + caseCategory + '\'' +
-                ", legalAdvisor='" + legalAdvisor + '\'' +
-                ", assignDate=" + assignDate +
-                '}';
+        return "Case{" + "clientName=" + clientName + ", clientNumber=" + clientNumber + ", Categoriesoncolumn=" + Categoriesoncolumn + ", advisornameoncolumn=" + advisornameoncolumn + ", dateoncolumn=" + dateoncolumn + '}';
     }
-    
+
+
+
+   
+ 
+
 }

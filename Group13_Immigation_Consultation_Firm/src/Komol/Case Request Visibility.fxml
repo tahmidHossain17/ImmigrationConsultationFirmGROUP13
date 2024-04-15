@@ -14,14 +14,14 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="398.0" layoutY="80.0" mnemonicParsing="false" onAction="#loadinfobuttononclick" text="Load info" />
-      <TableView layoutX="27.0" layoutY="136.0" prefHeight="200.0" prefWidth="554.0">
+      <Button layoutX="398.0" layoutY="80.0" mnemonicParsing="false" onAction="#loadinfobuttononclick" prefHeight="31.0" prefWidth="99.0" text="Load info" />
+      <TableView fx:id="tableview" layoutX="27.0" layoutY="136.0" prefHeight="200.0" prefWidth="554.0">
         <columns>
-          <TableColumn fx:id="clientnameoncolumn" prefWidth="119.0" text="Name" />
-          <TableColumn fx:id="numberoncolumn" prefWidth="89.0" text="Number" />
-            <TableColumn fx:id="detailsoncolumn" minWidth="4.0" prefWidth="92.0" text="Details" />
-            <TableColumn fx:id="typeoncolumn" minWidth="0.0" prefWidth="131.0" text="type" />
-            <TableColumn fx:id="genderoncolumn" prefWidth="122.0" text="gender" />
+          <TableColumn fx:id="clientName" prefWidth="119.0" text="Client Name" />
+          <TableColumn fx:id="clientNumber" prefWidth="89.0" text="Number" />
+            <TableColumn fx:id="Categoriesoncolumn" minWidth="4.0" prefWidth="92.0" text="Catagories" />
+            <TableColumn fx:id="advisornameoncolumn" minWidth="0.0" prefWidth="131.0" text="Advisor name" />
+            <TableColumn fx:id="dateoncolumn" prefWidth="122.0" text="Date" />
         </columns>
       </TableView>
       <Button layoutX="473.0" layoutY="349.0" mnemonicParsing="false" onAction="#logoutbuttononclick" text="Logout" />

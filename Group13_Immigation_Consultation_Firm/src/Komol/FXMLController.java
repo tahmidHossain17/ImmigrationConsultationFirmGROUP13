@@ -35,6 +35,11 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void sendbuttononclick(ActionEvent event) {
+            
+    employeenametextfield.clear();
+    employeenumbertextfield.clear();
+    sendreporttextfield.clear();
+
     }
 
     @FXML
