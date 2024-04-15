@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
@@ -123,7 +124,7 @@ public class ImmigrationProcessingOfficerMainDashboardController implements Init
 
     @FXML
     private void openSendUpdatesToManagingDirectorScene(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SendUpdateToManagingDirectorScene.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/prosanto2010271/Update To MD.fxml"));
         Parent parent = fxmlLoader.load();
 
     
@@ -138,7 +139,7 @@ public class ImmigrationProcessingOfficerMainDashboardController implements Init
 
     @FXML
     private void openTermsAndPolicySceneOnMouseClick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Tahmid_2220557/TermsAndPolicy.fxml"));
         Parent parent = fxmlLoader.load();
 
     
@@ -152,7 +153,15 @@ public class ImmigrationProcessingOfficerMainDashboardController implements Init
     }
 
     @FXML
-    private void logoutbuttononclick(ActionEvent event) {
+    private void logoutbuttononclick(ActionEvent event)throws IOException {
+        Parent parent=FXMLLoader.load(getClass().getResource("/mainPKG/Login.fxml"));
+        
+        Scene scene1=new Scene(parent);
+        
+        Stage stg=(Stage)((Node)event.getSource()).getScene().getWindow();
+        
+        stg.setScene(scene1);
+        stg.show();
     }
     
 }
