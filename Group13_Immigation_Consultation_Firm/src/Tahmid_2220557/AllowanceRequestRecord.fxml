@@ -31,8 +31,8 @@
       <TextArea fx:id="outputTxtArea" layoutX="386.0" layoutY="82.0" prefHeight="99.0" prefWidth="200.0" />
       <TextField fx:id="SearchFeild" layoutX="137.0" layoutY="107.0" onAction="#searchbyEmpIDTExtFeildOnClk" />
       <Text layoutX="14.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search by emp name" />
-      <ComboBox layoutX="14.0" layoutY="70.0" prefHeight="25.0" prefWidth="111.0" promptText="designation" />
-      <ComboBox layoutX="137.0" layoutY="70.0" prefWidth="150.0" promptText="Allownce type" />
-      <Button layoutX="301.0" layoutY="70.0" mnemonicParsing="false" text="Load" />
+      <ComboBox fx:id="designationComboBox" layoutX="14.0" layoutY="70.0" prefHeight="25.0" prefWidth="111.0" promptText="designation" />
+      <ComboBox fx:id="allowanceTypeComboBox" layoutX="137.0" layoutY="70.0" prefWidth="150.0" promptText="Allownce type" />
+      <Button layoutX="301.0" layoutY="70.0" mnemonicParsing="false" onAction="#loadButtonOnMouseClick" text="Load" />
    </children>
 </AnchorPane>

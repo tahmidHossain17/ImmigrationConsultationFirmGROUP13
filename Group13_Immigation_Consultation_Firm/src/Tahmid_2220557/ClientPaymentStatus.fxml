@@ -37,9 +37,8 @@
             <TableColumn fx:id="dueTableColumn" prefWidth="111.0" text="Due" />
         </columns>
       </TableView>
-      <Button layoutX="379.0" layoutY="97.0" mnemonicParsing="false" onAction="#showTransactionsButtonOnMouseClick" prefHeight="25.0" prefWidth="180.0" text="Show Transactions" />
+      <Button layoutX="369.0" layoutY="339.0" mnemonicParsing="false" onAction="#showTransactionsButtonOnMouseClick" prefHeight="25.0" prefWidth="180.0" text="Show Transactions" />
       <Button layoutX="63.0" layoutY="351.0" mnemonicParsing="false" onAction="#backbuttonOnMouseClick" prefHeight="25.0" prefWidth="64.0" text="Back" />
-      <Button layoutX="451.0" layoutY="351.0" mnemonicParsing="false" onAction="#saveRecordOnMouseClick" text="Save Record as PDF" />
-      <Button layoutX="278.0" layoutY="85.0" mnemonicParsing="false" onAction="#loadButtonOnMouseClick" prefHeight="25.0" prefWidth="64.0" text="Load" />
+      <Button layoutX="305.0" layoutY="110.0" mnemonicParsing="false" onAction="#loadButtonOnMouseClick" prefHeight="25.0" prefWidth="64.0" text="Load" />
    </children>
 </AnchorPane>

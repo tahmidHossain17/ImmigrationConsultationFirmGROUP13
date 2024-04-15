@@ -38,27 +38,28 @@ public class BalanceSheetOutputController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        Balance s;
-        ObjectInputStream ois = null;
-        try {
-            //FileInputStream fis = new FileInputStream("studObjects.bin");
-            //ois = new ObjectInputStream(fis);
-            ois = new ObjectInputStream(new FileInputStream("balancerecord.bin"));
-
-//            outputTxtArea.setText(null);
-
-            //int[] arr={1,2,3};
-            //System.out.println(arr[3]);
-            while (true) {
-                System.out.println("helo");
-                s = (Balance) ois.readObject();
-                System.out.println(s.toString());
-                monthLabel.setText("As at "+s.getMonth()+",2024");
-                assetLabel.setText(Integer.toString(s.getAsset()));
-                LiabitlitiesLabel.setText(Integer.toString(s.getLiability()));
-                OELabel.setText(Integer.toString(s.getOE()));
-                OEfinalLabel.setText(Integer.toString(s.getOE()));
-                assetFinal.setText(Float.toString(s.totalAsset()));
+//        Balance s;
+            
+//        ObjectInputStream ois = null;
+//        try {
+//            //FileInputStream fis = new FileInputStream("studObjects.bin");
+//            //ois = new ObjectInputStream(fis);
+//            ois = new ObjectInputStream(new FileInputStream("balancerecord.bin"));
+//
+////            outputTxtArea.setText(null);
+//
+//            //int[] arr={1,2,3};
+//            //System.out.println(arr[3]);
+//            while (true) {
+//                System.out.println("helo");
+//                s = (Balance) ois.readObject();
+//                System.out.println(s.toString());
+//                monthLabel.setText("As at "+s.getMonth()+",2024");
+//                assetLabel.setText(Integer.toString(s.getAsset()));
+//                LiabitlitiesLabel.setText(Integer.toString(s.getLiability()));
+//                OELabel.setText(Integer.toString(s.getOE()));
+//                OEfinalLabel.setText(Integer.toString(s.getOE()));
+//                assetFinal.setText(Float.toString(s.totalAsset()));
                 
                 
                 
@@ -70,21 +71,32 @@ public class BalanceSheetOutputController implements Initializable {
             }
             //ois.close();
 
-        } catch (RuntimeException e) {
-            e.printStackTrace();
-            //
-        } catch (Exception ex) {
-            try {
-                if (ois != null) {
-                    ois.close();
-                }
-            } catch (IOException ex1) {
-            }
-
-        }
-
-        
+//        } catch (RuntimeException e) {
+//            e.printStackTrace();
+//            //
+//        } catch (Exception ex) {
+//            try {
+//                if (ois != null) {
+//                    ois.close();
+//                }
+//            } catch (IOException ex1) {
+//            }
+//
+//        }
+//
+//        
         // TODO
-    }    
+//    }    
+    public void datapass(String asset, String liability, String oe,String month){
+        
+        monthLabel.setText("    As at "+ month+" ,2024");
+        assetLabel.setText(asset);
+        LiabitlitiesLabel.setText(liability);
+        OELabel.setText(oe);
+        
+        assetFinal.setText(asset);
+        OEfinalLabel.setText(Integer.toString(Integer.parseInt(liability)+Integer.parseInt(oe)));
     
+    
+    }
 }

@@ -38,34 +38,34 @@ public class ClientPaymentStatusController implements Initializable {
     @FXML
     private ComboBox<String> NameComboBox;
     @FXML
-    private TableView<Paymentslip> transactionTableView;
+    private TableView<DummyPayment> transactionTableView;
     @FXML
-    private TableColumn<Paymentslip, String> nameTableColumn;
+    private TableColumn<DummyPayment, String> nameTableColumn;
 
     @FXML
-    private TableColumn<Paymentslip, LocalDate> dojTableColumn;
+    private TableColumn<DummyPayment, LocalDate> dojTableColumn;
     @FXML
-    private TableColumn<Paymentslip, String> paidAmountTableColumn;
+    private TableColumn<DummyPayment, String> paidAmountTableColumn;
     @FXML
-    private TableColumn<Paymentslip, String> dueTableColumn;
+    private TableColumn<DummyPayment, Float> dueTableColumn;
     Stage sg;
     @FXML
     private TextField phoneTextField;
     @FXML
-    private TableColumn<Paymentslip, String> phoneTableColumn;
+    private TableColumn<DummyPayment, String> phoneTableColumn;
     
-    ArrayList<Paymentslip> lst;
+    ArrayList<DummyPayment> lst;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        nameTableColumn.setCellValueFactory(new PropertyValueFactory<Paymentslip, String>("name"));
-        phoneTableColumn.setCellValueFactory(new PropertyValueFactory<Paymentslip, String>("phone"));
-        dojTableColumn.setCellValueFactory(new PropertyValueFactory<Paymentslip, LocalDate>("date"));
-        paidAmountTableColumn.setCellValueFactory(new PropertyValueFactory<Paymentslip, String>("recievedAmount"));
-        dueTableColumn.setCellValueFactory(new PropertyValueFactory<Paymentslip, String>("due"));
+        nameTableColumn.setCellValueFactory(new PropertyValueFactory<DummyPayment, String>("name"));
+        phoneTableColumn.setCellValueFactory(new PropertyValueFactory<DummyPayment, String>("phone"));
+        dojTableColumn.setCellValueFactory(new PropertyValueFactory<DummyPayment, LocalDate>("date"));
+        paidAmountTableColumn.setCellValueFactory(new PropertyValueFactory<DummyPayment, String>("recievedAmount"));
+        dueTableColumn.setCellValueFactory(new PropertyValueFactory<DummyPayment, Float>("due"));
         NameComboBox.getItems().add("All");
         // TODO
         lst=new ArrayList();
@@ -75,7 +75,7 @@ public class ClientPaymentStatusController implements Initializable {
 private void showTransactionsButtonOnMouseClick(ActionEvent event) {
     transactionTableView.getItems().clear(); // Clear existing items
 //    ObservableList<Paymentslip> ob=FXCollections.observableArrayList();
-    Paymentslip p;
+    DummyPayment p;
     
     ObjectInputStream ois = null;
     try {
@@ -83,7 +83,7 @@ private void showTransactionsButtonOnMouseClick(ActionEvent event) {
 
         while (true) {
             try {
-                p = (Paymentslip) ois.readObject();
+                p = (DummyPayment) ois.readObject();
 //                ob.add(p);
                 
                 transactionTableView.getItems().add(p);
@@ -143,20 +143,19 @@ private void backbuttonOnMouseClick(ActionEvent event)  throws IOException{
         sg.show();
     }
 
-    @FXML
-private void saveRecordOnMouseClick(ActionEvent event) {
-    }
 
     @FXML
 private void loadButtonOnMouseClick(ActionEvent event) {
-    for (Paymentslip s:lst){
-            transactionTableView.getItems().clear();
+         transactionTableView.getItems().clear();
+    for (DummyPayment s:lst){
         if(NameComboBox.getValue().equals(s.getName())){
             transactionTableView.getItems().add(s);
+            phoneTextField.setText(s.getPhone());
+            
         }
     if(NameComboBox.getValue().equals("All")){
               transactionTableView.getItems().clear();
-        for (Paymentslip t:lst){
+        for (DummyPayment t:lst){
               transactionTableView.getItems().add(t);
              
         }
@@ -167,7 +166,8 @@ private void loadButtonOnMouseClick(ActionEvent event) {
         
     
     }
+}
     
     }
     
-}
+
