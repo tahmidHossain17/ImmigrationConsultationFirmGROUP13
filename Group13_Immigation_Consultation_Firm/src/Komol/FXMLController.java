@@ -39,6 +39,7 @@ public class FXMLController implements Initializable {
     employeenametextfield.clear();
     employeenumbertextfield.clear();
     sendreporttextfield.clear();
+    //designationcombobox.clear();
 
     }
 

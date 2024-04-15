@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
@@ -33,7 +34,7 @@ public class ClientDashBoardMainSceneController implements Initializable {
 
     @FXML
     private void openFixAppointmentSceneOnMouseClick(ActionEvent event)throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FixAppointmentScene.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Tahmid_2220557/FixAppointment.fxml"));
         Parent parent = fxmlLoader.load();
 
     
@@ -152,7 +153,15 @@ public class ClientDashBoardMainSceneController implements Initializable {
     }
 
     @FXML
-    private void logoutbuttononclick(ActionEvent event) {
+    private void logoutbuttononclick(ActionEvent event)throws IOException {
+        Parent parent=FXMLLoader.load(getClass().getResource("/mainPKG/Login.fxml"));
+        
+        Scene scene1=new Scene(parent);
+        
+        Stage stg=(Stage)((Node)event.getSource()).getScene().getWindow();
+        
+        stg.setScene(scene1);
+        stg.show();
     }
 
 

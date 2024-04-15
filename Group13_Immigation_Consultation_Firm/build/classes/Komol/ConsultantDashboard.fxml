@@ -39,7 +39,7 @@
                               <Font name="Century Schoolbook" size="18.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#clientreviewbuttonclick" prefHeight="69.0" prefWidth="205.0" text="Client Review" textFill="#321515">
+                        <Button mnemonicParsing="false" onAction="#clientreviewbuttonclick" prefHeight="69.0" prefWidth="205.0" text="Appointment" textFill="#321515">
                            <font>
                               <Font name="Century Schoolbook" size="18.0" />
                            </font>

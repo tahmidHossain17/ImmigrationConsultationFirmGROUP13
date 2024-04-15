@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Solayman_2221430.ClientTicketProcessingController">
+<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Solayman_2221430.ClientTicketProcessingController">
    <children>
       <TableView fx:id="bookingRequestsTableView" layoutX="1.0" layoutY="41.0" prefHeight="197.0" prefWidth="617.0">
         <columns>
@@ -21,7 +21,7 @@
       <Label layoutX="19.0" layoutY="369.0" text="Note:Please Confirm the tickets and send confirmation to the client by selecting the row and press confirm" />
       <Button layoutX="523.0" layoutY="328.0" mnemonicParsing="false" onAction="#confirmButtonOnMouseClick" text="Confirm" />
       <Button layoutX="10.0" layoutY="328.0" mnemonicParsing="false" onAction="#cannotBeProcessedButtonOnMouseClick" text="Cannot be processed " />
-      <Button fx:id="dashboardButton" layoutX="537.0" layoutY="-2.0" mnemonicParsing="false" text="Dashbaoard" />
+      <Button layoutX="527.0" layoutY="2.0" mnemonicParsing="false" onAction="#loadTableButtonOnMouseClick" text="Load Table" />
       <TextField fx:id="tickerNumberTextField" layoutX="125.0" layoutY="246.0" />
       <Label layoutX="2.0" layoutY="250.0" text="Enter Ticket Number:" />
       <TextField fx:id="passportNoTextField" layoutX="432.0" layoutY="246.0" />

@@ -81,7 +81,7 @@ public class ConsultantDashboardController implements Initializable {
 
     @FXML
     private void clientreviewbuttonclick(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ClientReview.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Tahmid_2220557/AppointmentRecord.fxml"));
         Parent parent = fxmlLoader.load();
 
         // Retrieve preferred height and width from the loaded parent node
