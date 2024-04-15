@@ -53,19 +53,67 @@ public class KnowAboutYourDestinationSceneController implements Initializable {
     }
 
     @FXML
-    private void chainaButtonOnMouseClick(ActionEvent event) {
+    private void chainaButtonOnMouseClick(ActionEvent event)throws IOException {
+        Parent node= FXMLLoader.load(getClass().getResource("KnowAboutCountryScene.fxml"));
+        
+        
+        Scene country = new Scene(node);
+        
+        
+        
+        Stage countryStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        
+        countryStage.setTitle("Know About China");
+        countryStage.setScene(country);
+        countryStage.show();
     }
 
     @FXML
-    private void malaysiaButtonOnMouseClick(ActionEvent event) {
+    private void malaysiaButtonOnMouseClick(ActionEvent event)throws IOException {
+        Parent node= FXMLLoader.load(getClass().getResource("KnowAboutCountryScene.fxml"));
+        
+        
+        Scene country = new Scene(node);
+        
+        
+        
+        Stage countryStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        
+        countryStage.setTitle("Know About Malaysia");
+        countryStage.setScene(country);
+        countryStage.show();
     }
 
     @FXML
-    private void canadaButtonOnMouseClick(ActionEvent event) {
+    private void canadaButtonOnMouseClick(ActionEvent event)throws IOException {
+        Parent node= FXMLLoader.load(getClass().getResource("KnowAboutCountryScene.fxml"));
+        
+        
+        Scene country = new Scene(node);
+        
+        
+        
+        Stage countryStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        
+        countryStage.setTitle("Know About Canada");
+        countryStage.setScene(country);
+        countryStage.show();
     }
 
     @FXML
-    private void australiaBittonOnMouseClick(ActionEvent event) {
+    private void australiaBittonOnMouseClick(ActionEvent event)throws IOException {
+        Parent node= FXMLLoader.load(getClass().getResource("KnowAboutCountryScene.fxml"));
+        
+        
+        Scene country = new Scene(node);
+        
+        
+        
+        Stage countryStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        
+        countryStage.setTitle("Know About Australia");
+        countryStage.setScene(country);
+        countryStage.show();
     }
     
 }
