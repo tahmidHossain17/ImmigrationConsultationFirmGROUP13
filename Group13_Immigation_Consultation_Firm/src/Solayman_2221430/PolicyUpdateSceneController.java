@@ -58,11 +58,12 @@ public class PolicyUpdateSceneController implements Initializable {
     ArrayList<PolicyUpdate> policyList;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        policyList = new ArrayList<PolicyUpdate>();
         
         countryComboBox.getItems().addAll("USA","China","Audtralia","Malaysia","Canada");
-        ieltsComboBox.getItems().addAll("below 5","6","7","8","9","N/A");
-        satComboBox.getItems().addAll("1200-1250","1250-1300","1300-1350","1350-1400","1400-1500","1500+","N/A");
-        greComboBox.getItems().addAll("260-280","280-300","300-320","320-340");
+        ieltsComboBox.getItems().addAll("5","6","7","8","9","N/A");
+        satComboBox.getItems().addAll("1200","1250","1300","1350","1400","1500","N/A");
+        greComboBox.getItems().addAll("260","280","300","320");
         languageIssueComboBox.getItems().addAll("English is enough","Native Language is needed");
         spouseVisaRateComboBox.getItems().addAll("Below 40%","50%","60%","70%","80%+");
         minimumEducationComboBox.getItems().addAll("SSC","O-levels","HSC","A-levels","BSC","BA","Bcom");
@@ -100,6 +101,7 @@ public class PolicyUpdateSceneController implements Initializable {
             for (PolicyUpdate i : policyList) {
 
                 oos.writeObject(i);
+                System.out.println("Write Sucessfull");
 
             }
 
@@ -139,7 +141,7 @@ public class PolicyUpdateSceneController implements Initializable {
 
     @FXML
     private void addButtonOnMouseClick(ActionEvent event) {
-        policyList = new ArrayList<PolicyUpdate>();
+        
         policyList.add(new PolicyUpdate(countryComboBox.getValue(),spouseVisaRateComboBox.getValue(),affiliatedUniTextField.getText(),affiliatedOrgTextField.getText(),touristPlacesTextField.getText(),ieltsComboBox.getValue(),satComboBox.getValue(),greComboBox.getValue(),languageIssueComboBox.getValue(),skillsTextField.getText(),minimumEducationComboBox.getValue()));
 
     }

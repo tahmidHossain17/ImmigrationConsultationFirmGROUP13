@@ -14,7 +14,7 @@ public class CountryInfo {
     public CountryInfo() {
     }
 
-    public CountryInfo(String country, String languageHelp, String extraSkills, String spouseVisaPossibility) {
+    public CountryInfo(String languageHelp, String extraSkills, String spouseVisaPossibility) {
         
         this.languageHelp = languageHelp;
         this.extraSkills = extraSkills;
