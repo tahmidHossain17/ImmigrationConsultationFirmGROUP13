@@ -4,20 +4,30 @@
  */
 package prosanto2010271;
 
+import com.itextpdf.kernel.geom.PageSize;
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Paragraph;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.FileChooser;
 
 /**
  * FXML Controller class
@@ -87,8 +97,65 @@ public class ViewReportController implements Initializable {
             
             }           
         }
+       reportTableView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);  
+    }
+
+    @FXML
+    private void generatePdfButtonOnMouseClick(ActionEvent event) {
+        Update selectedReport = reportTableView.getSelectionModel().getSelectedItem();
+        
+          try {
+        FileChooser fc = new FileChooser();
+        fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("PDF files", "*.pdf"));
+        File f = fc.showSaveDialog(null);
+        
+        if (f != null) {
+            // Create a new PDF document
+            PdfWriter pw = new PdfWriter(new FileOutputStream(f));
+            PdfDocument pdf = new PdfDocument(pw);
+            Document doc = new Document(pdf, PageSize.A4);
+            
+            // Add content to the PDF document
+            String name = selectedReport.getName();
+            int id = selectedReport.getId();
+            String details = selectedReport.getDetails();
+            String date = selectedReport.getDate().toString();
+            
+            // Add data to the PDF
+            doc.add(new Paragraph("Report")
+   
+                .setFontSize(26));
+            doc.add(new Paragraph("Name: " + name));
+            doc.add(new Paragraph("ID: " + id));
+            doc.add(new Paragraph("Date: " + date));
+            doc.add(new Paragraph("Details: " + details));
+            
+           ;
+            
+            
+            // Close the document
+            doc.close();
+            
+            // Show success message
+            Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
+            successAlert.setContentText("PDF saved successfully.");
+            successAlert.showAndWait();
+        } else {
+            // Show cancellation message
+            Alert cancelAlert = new Alert(Alert.AlertType.INFORMATION);
+            cancelAlert.setContentText("Saving as PDF: cancelled!");
+            cancelAlert.showAndWait();
+        }
+    } catch (Exception e) {
+        // Show error message
+        Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+        errorAlert.setContentText("Oops! Exception: " + e.toString() + " occurred.");
+        errorAlert.showAndWait();
+        e.printStackTrace();
     }
         
+    }
+       
     }
         
 

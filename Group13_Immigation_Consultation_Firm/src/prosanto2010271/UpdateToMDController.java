@@ -86,23 +86,23 @@ public class UpdateToMDController implements Initializable {
         } 
          
      
-             FileWriter fw = null;
-            try {
-               
-                 fw = new FileWriter("UpdateToMDObject.txt");
-                String str="";
-                for(Update s: updateList){
-                    str += s.getName()+","+ s.getId()+","+s.getDate()+","+s.getDetails()+"\n";
-              
-                }
-                fw.write(str);  //fw.write(s.toString());
-                fw.close();
-             }
-            catch (IOException ex) {
-              //catch (Exception ex) {
-                //fw.close();
-                //SHOW ex.toString() IN AN ALERT
-            }
+//             FileWriter fw = null;
+//            try {
+//               
+//                 fw = new FileWriter("UpdateToMDObject.txt");
+//                String str="";
+//                for(Update s: updateList){
+//                    str += s.getName()+","+ s.getId()+","+s.getDate()+","+s.getDetails()+"\n";
+//              
+//                }
+//                fw.write(str);  //fw.write(s.toString());
+//                fw.close();
+//             }
+//            catch (IOException ex) {
+//              //catch (Exception ex) {
+//                //fw.close();
+//                //SHOW ex.toString() IN AN ALERT
+//            }
     }
     @FXML
     private void uploadFileOnMouseClick(ActionEvent event) {

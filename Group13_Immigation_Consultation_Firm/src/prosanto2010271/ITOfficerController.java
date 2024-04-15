@@ -13,8 +13,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -22,7 +26,7 @@ import javafx.scene.layout.BorderPane;
  * @author prosh
  */
 public class ITOfficerController implements Initializable {
-
+  
     @FXML
     private BorderPane borderPane;
 
@@ -32,6 +36,7 @@ public class ITOfficerController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
     }    
     
     private void loadUi(String ui){
@@ -81,7 +86,7 @@ public class ITOfficerController implements Initializable {
 
     @FXML
     private void termsAndPolicyButtonMouseOnClick(ActionEvent event) {
-        loadUi("Terms and Policy");
+        loadUi("/Tahmid_2220557/TermsAndPolicy");
     }
 
     @FXML
@@ -93,5 +98,27 @@ public class ITOfficerController implements Initializable {
     private void updateToMDMouseOnClick(ActionEvent event) {
         loadUi("Update To MD");
     }
+
+
+ 
+
+    @FXML
+    private void logoutButtonOnMouseClick(ActionEvent event) throws IOException {
+        Parent loginParent = FXMLLoader.load(getClass().getResource("/mainPKG/Login.fxml"));
+      
+        Scene scene1 = new Scene(loginParent);
+        
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene1);
+        window.show();
+    }
+
+    @FXML
+    private void showNotificationButtonOnMouseClick(ActionEvent event) {
+        loadUi("IT Officer Notification");
+        
+    }
     
-}
+    }
+    
+

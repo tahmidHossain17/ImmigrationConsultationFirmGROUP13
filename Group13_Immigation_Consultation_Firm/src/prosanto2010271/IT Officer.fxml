@@ -4,36 +4,32 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prosanto2010271.ITOfficerController">
-   <top>
-      <MenuBar prefHeight="48.0" prefWidth="644.0" style="-fx-background-color: #b4a7d6;" BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-                  <MenuItem mnemonicParsing="false" text="Log Out" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-   </top>
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="752.0" style="-fx-background-color: #b4a7d6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prosanto2010271.ITOfficerController">
    <left>
       <VBox alignment="CENTER" prefHeight="320.0" prefWidth="161.0" style="-fx-background-color: cca7d6;" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" onAction="#profileButtonMouseOnClick" prefHeight="29.0" prefWidth="177.0" style="-fx-background-color: #c9d6a7;" text="Profile">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#updateToMDMouseOnClick" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #c9d6a7;" text="Update to MD">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button depthTest="ENABLE" mnemonicParsing="false" onAction="#allowanceButtonMouseOnClick" prefHeight="33.0" prefWidth="172.0" style="-fx-background-color: #c9d6a7;" text="Allowance request">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#termsAndPolicyButtonMouseOnClick" prefHeight="38.0" prefWidth="161.0" style="-fx-background-color: #c9d6a7;" text="Terms and Policy ">
                <effect>
                   <InnerShadow />
                </effect>
@@ -51,17 +47,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" onAction="#updateToMDMouseOnClick" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #c9d6a7;" text="Update to MD">
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </Button>
             <Button mnemonicParsing="false" onAction="#feedbackButtonMouseOnClick" prefHeight="44.0" prefWidth="161.0" style="-fx-background-color: #c9d6a7;" text="Feedback &amp; Suggestion">
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </Button>
-            <Button depthTest="ENABLE" mnemonicParsing="false" onAction="#allowanceButtonMouseOnClick" prefHeight="33.0" prefWidth="172.0" style="-fx-background-color: #c9d6a7;" text="Allowance request">
                <effect>
                   <InnerShadow />
                </effect>
@@ -71,7 +57,7 @@
                   <InnerShadow />
                </effect>
             </Button>
-            <Button mnemonicParsing="false" onAction="#termsAndPolicyButtonMouseOnClick" prefHeight="53.0" prefWidth="194.0" style="-fx-background-color: #c9d6a7;" text="Terms and Policy ">
+            <Button layoutX="10.0" layoutY="288.0" mnemonicParsing="false" onAction="#showNotificationButtonOnMouseClick" prefHeight="40.0" prefWidth="182.0" style="-fx-background-color: #c9d6a7;" text="Notification">
                <effect>
                   <InnerShadow />
                </effect>
@@ -81,11 +67,15 @@
                   <InnerShadow />
                </effect>
             </Button>
+            <Button mnemonicParsing="false" onAction="#logoutButtonOnMouseClick" prefHeight="41.0" prefWidth="175.0" style="-fx-background-color: #c9d6a7;" text="Log Out">
+               <effect>
+                  <InnerShadow />
+               </effect></Button>
          </children>
       </VBox>
    </left>
    <center>
-      <AnchorPane prefHeight="388.0" prefWidth="582.0" style="-fx-background-color: #808080;" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="380.0" prefWidth="591.0" style="-fx-background-color: #808080;" BorderPane.alignment="CENTER" />
    </center>
    <bottom>
       <ButtonBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #b4a7d6;">
@@ -94,4 +84,11 @@
          </buttons>
       </ButtonBar>
    </bottom>
+   <top>
+      <Label prefHeight="66.0" prefWidth="200.0" text="IT Officer" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </top>
 </BorderPane>
