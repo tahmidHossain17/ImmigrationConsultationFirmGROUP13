@@ -146,7 +146,7 @@ public class AccountantzDashboardController implements Initializable {
 
     @FXML
     private void yearlyFinancialReportOnClick(ActionEvent event)throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PayrollProcessing.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FinancialReport_Chart.fxml"));
         Parent parent = fxmlLoader.load();
 
     

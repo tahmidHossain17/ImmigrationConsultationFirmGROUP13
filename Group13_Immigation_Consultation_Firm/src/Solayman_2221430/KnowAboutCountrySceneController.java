@@ -14,10 +14,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 /**
@@ -46,6 +46,11 @@ public class KnowAboutCountrySceneController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        languageHelpColumn.setCellValueFactory(new PropertyValueFactory<CountryInfo, String>("languageHelp"));
+        extraSkillsColumn.setCellValueFactory(new PropertyValueFactory<CountryInfo, String>("extraSkills"));
+        spouseVisaColumn.setCellValueFactory(new PropertyValueFactory<CountryInfo, String>("spouseVisaPossibility"));
+        
+        
 
     }
 
@@ -60,17 +65,170 @@ public class KnowAboutCountrySceneController implements Initializable {
         if (countryStage.getTitle().equals("Know About USA")) {
             countryNameLabel.setText("USA");
             ObjectInputStream ois = null;
+            
             try {
-                Review r;
-                ois = new ObjectInputStream(new FileInputStream("Reviews.bin"));
+                PolicyUpdate r;
+                ois = new ObjectInputStream(new FileInputStream("PolicyUpdatesFromImmigrationOfficer.bin"));
+
+                
+//                extraInfoTableView.getItems().clear();
+
+                while (true) {
+                    r = (PolicyUpdate) ois.readObject();
+                    r.toString();
+                    
+                    if(r.getCountry().equals("USA")){
+                        extraInfoTableView.getItems().add(new CountryInfo(r.getLanguageIssue(),r.getSkills(),r.getSpouse()));
+                        affiliatedUniversityLabel.setText(r.getAffiliatedUni());
+                        affilliatedOrganizationsLabel.setText(r.getAffiliatedOrg());
+                        touristPlacesTovisitLabel.setText(r.getTouristPlaces());
+                    }
+                }
+                
+            } catch (EOFException e) {
+                // Reached end of file
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            } finally {
+                if (ois != null) {
+                    try {
+                        ois.close();
+                    } catch (IOException ex1) {
+                        ex1.printStackTrace();
+                    }
+                }
+            }
+
+        }
+        if (countryStage.getTitle().equals("Know About Canada")) {
+            countryNameLabel.setText("Canada");
+            ObjectInputStream ois = null;
+            try {
+                PolicyUpdate r;
+                ois = new ObjectInputStream(new FileInputStream("PolicyUpdatesFromImmigrationOfficer.bin"));
 
                 
                 extraInfoTableView.getItems().clear();
 
                 while (true) {
-                    r = (Review) ois.readObject();
-                    extraInfoTableView.getItems().add(new CountryInfo());
+                    r = (PolicyUpdate) ois.readObject();
+                    r.toString();
+                    if(r.getCountry().equals("Canada")){
+                        extraInfoTableView.getItems().add(new CountryInfo(r.getLanguageIssue(),r.getSkills(),r.getSpouse()));
+                        affiliatedUniversityLabel.setText(r.getAffiliatedUni());
+                        affilliatedOrganizationsLabel.setText(r.getAffiliatedOrg());
+                        touristPlacesTovisitLabel.setText(r.getTouristPlaces());
+                    }
                 }
+                
+            } catch (EOFException e) {
+                // Reached end of file
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            } finally {
+                if (ois != null) {
+                    try {
+                        ois.close();
+                    } catch (IOException ex1) {
+                        ex1.printStackTrace();
+                    }
+                }
+            }
+
+        }
+        if (countryStage.getTitle().equals("Know About Australia")) {
+            countryNameLabel.setText("Australia");
+            ObjectInputStream ois = null;
+            try {
+                PolicyUpdate r;
+                ois = new ObjectInputStream(new FileInputStream("PolicyUpdatesFromImmigrationOfficer.bin"));
+
+                
+                extraInfoTableView.getItems().clear();
+
+                while (true) {
+                    r = (PolicyUpdate) ois.readObject();
+                    r.toString();
+                    if(r.getCountry().equals("Australia")){
+                        affiliatedUniversityLabel.setText(r.getAffiliatedUni());
+                        affilliatedOrganizationsLabel.setText(r.getAffiliatedOrg());
+                        touristPlacesTovisitLabel.setText(r.getTouristPlaces());
+                        extraInfoTableView.getItems().add(new CountryInfo(r.getLanguageIssue(),r.getSkills(),r.getSpouse()));
+                    }
+                }
+                
+            } catch (EOFException e) {
+                // Reached end of file
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            } finally {
+                if (ois != null) {
+                    try {
+                        ois.close();
+                    } catch (IOException ex1) {
+                        ex1.printStackTrace();
+                    }
+                }
+            }
+
+        }
+        if (countryStage.getTitle().equals("Know About Malaysia")) {
+            countryNameLabel.setText("Malaysia");
+            ObjectInputStream ois = null;
+            try {
+                PolicyUpdate r;
+                ois = new ObjectInputStream(new FileInputStream("PolicyUpdatesFromImmigrationOfficer.bin"));
+
+                
+                extraInfoTableView.getItems().clear();
+
+                while (true) {
+                    r = (PolicyUpdate) ois.readObject();
+                    r.toString();
+                    if(r.getCountry().equals("Malaysia")){
+                        affiliatedUniversityLabel.setText(r.getAffiliatedUni());
+                        affilliatedOrganizationsLabel.setText(r.getAffiliatedOrg());
+                        touristPlacesTovisitLabel.setText(r.getTouristPlaces());
+                        extraInfoTableView.getItems().add(new CountryInfo(r.getLanguageIssue(),r.getSkills(),r.getSpouse()));
+                    }
+                }
+                
+            } catch (EOFException e) {
+                // Reached end of file
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            } finally {
+                if (ois != null) {
+                    try {
+                        ois.close();
+                    } catch (IOException ex1) {
+                        ex1.printStackTrace();
+                    }
+                }
+            }
+
+        }
+        if (countryStage.getTitle().equals("Know About China")) {
+            countryNameLabel.setText("China");
+            ObjectInputStream ois = null;
+            try {
+                PolicyUpdate r;
+                ois = new ObjectInputStream(new FileInputStream("PolicyUpdatesFromImmigrationOfficer.bin"));
+
+                
+                extraInfoTableView.getItems().clear();
+
+                while (true) {
+                    r = (PolicyUpdate) ois.readObject();
+                    r.toString();
+                    if(r.getCountry().equals("China")){
+                        affiliatedUniversityLabel.setText(r.getAffiliatedUni());
+                        affilliatedOrganizationsLabel.setText(r.getAffiliatedOrg());
+                        touristPlacesTovisitLabel.setText(r.getTouristPlaces());
+                        extraInfoTableView.getItems().add(new CountryInfo(r.getLanguageIssue(),r.getSkills(),r.getSpouse()));
+                    }
+                }
+                
             } catch (EOFException e) {
                 // Reached end of file
             } catch (Exception ex) {

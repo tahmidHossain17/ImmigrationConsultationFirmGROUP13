@@ -7,19 +7,18 @@ import java.time.LocalDate;
 public class Paymentslip implements Serializable {
     String name,phone;
     int amount,recievedAmount,discount;
-    float due;
+  
     LocalDate date;
 
     public Paymentslip() {
     }
 
-    public Paymentslip(String name, String phone, int amount, int recievedAmount, int discount, float due, LocalDate date) {
+    public Paymentslip(String name, String phone, int amount, int recievedAmount, int discount, LocalDate date) {
         this.name = name;
         this.phone = phone;
         this.amount = amount;
         this.recievedAmount = recievedAmount;
         this.discount = discount;
-        this.due = due;
         this.date = date;
     }
 
@@ -63,13 +62,8 @@ public class Paymentslip implements Serializable {
         this.discount = discount;
     }
 
-    public float getDue() {
-        return due;
-    }
-
-    public void setDue(float due) {
-        this.due = due;
-    }
+  
+    
 
     public LocalDate getDate() {
         return date;
@@ -81,7 +75,7 @@ public class Paymentslip implements Serializable {
 
     @Override
     public String toString() {
-        return "Paymentslip{" + "name=" + name + ", phone=" + phone + ", amount=" + amount + ", recievedAmount=" + recievedAmount + ", discount=" + discount + ", due=" + due + ", date=" + date + '}';
+        return "Paymentslip{" + "name=" + name + ", phone=" + phone + ", amount=" + amount + ", recievedAmount=" + recievedAmount + ", discount=" + discount + "date=" + date + '}';
     }
     
     

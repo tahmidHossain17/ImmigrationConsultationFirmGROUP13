@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #DEB887;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tahmid_2220557.AppointmentRecordController">
+   <children>
+      <Label layoutX="137.0" layoutY="27.0" prefHeight="46.0" prefWidth="277.0" style="-fx-background-color: #E6E6FA;" text="Appointment Record">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="113.0" prefHeight="23.0" prefWidth="74.0" style="-fx-background-color: #E6E6FA;" text="Name" />
+      <ComboBox fx:id="nameComboBox" layoutX="126.0" layoutY="112.0" prefWidth="150.0" />
+      <Button layoutX="300.0" layoutY="112.0" mnemonicParsing="false" onAction="#loadButtonOnMouseClick" text="Load" />
+      <Button layoutX="362.0" layoutY="112.0" mnemonicParsing="false" onAction="#showAppointmentbuttonOnMouseClick" prefHeight="33.0" prefWidth="181.0" text="Show Appointments" />
+      <TableView fx:id="appointmentTableView" layoutX="37.0" layoutY="167.0" prefHeight="201.0" prefWidth="475.0">
+        <columns>
+          <TableColumn fx:id="dateTableColumn" prefWidth="114.33334350585938" text="Date" />
+          <TableColumn fx:id="nameTableColumn" prefWidth="118.66668701171875" text="Name" />
+            <TableColumn fx:id="phoneTableColumn" prefWidth="118.66668701171875" text="Phone" />
+            <TableColumn fx:id="timeSlotTableColumn" prefWidth="118.66668701171875" text="Time slot" />
+        </columns>
+      </TableView>
+      <Button layoutX="521.0" layoutY="340.0" mnemonicParsing="false" onAction="#backButtonOnMouseClick" prefHeight="46.0" prefWidth="65.0" text="Back" />
+   </children>
+</AnchorPane>

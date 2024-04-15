@@ -8,12 +8,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -43,6 +45,12 @@ public class AllowanceRequestRecordController implements Initializable {
     private TextArea outputTxtArea;
     @FXML
     private TextField SearchFeild;
+    @FXML
+    private ComboBox<String> designationComboBox;
+    @FXML
+    private ComboBox<String> allowanceTypeComboBox;
+    
+    ArrayList<AllowanceRequest> alwList;
 
     /**
      * Initializes the controller class.
@@ -54,7 +62,10 @@ public class AllowanceRequestRecordController implements Initializable {
         allowanceTypeTableColumn.setCellValueFactory(new PropertyValueFactory<AllowanceRequest,String>("allowanceType"));
         paymentMethodTableColumn.setCellValueFactory(new PropertyValueFactory<AllowanceRequest,String>("paymentMethod"));
         amountTableColumn.setCellValueFactory(new PropertyValueFactory<AllowanceRequest,Integer>("amount"));
-
+        designationComboBox.getItems().addAll("Accountant", "Receptionist", "Consultant", "Lawyer", "Immigration Processing Officer", "IT Officer");
+        allowanceTypeComboBox.getItems().addAll("Transportation", "Food", "Material", "Talk Time");
+        
+        alwList=new ArrayList();
     }    
 
     @FXML
@@ -69,7 +80,7 @@ public class AllowanceRequestRecordController implements Initializable {
             ois = new ObjectInputStream(new FileInputStream("AllowanceRequest.bin"));
 
 //            outputTxtArea.setText(null);
-
+            requestTableView.getItems().clear();
             //int[] arr={1,2,3};
             //System.out.println(arr[3]);
             while (true) {
@@ -81,6 +92,7 @@ public class AllowanceRequestRecordController implements Initializable {
 //                requestTableView.getItems().add(new AllowanceRequest(s.getName(),s.getAllowanceType(),s.getDesignantion(),s.getPaymentMethod(),s.getAmount()));
 //                outputTxtArea.appendTexts.toString() + "\n");
                 outputTxtArea.appendText(s.toString()+"\n");
+                alwList.add(s);
             }
             //ois.close();
 
@@ -113,6 +125,17 @@ public class AllowanceRequestRecordController implements Initializable {
             requestTableView.getItems().add(request);
         }
     }
+        
+    }
+
+    @FXML
+    private void loadButtonOnMouseClick(ActionEvent event) {
+        requestTableView.getItems().clear();
+        for(AllowanceRequest a:alwList){
+            if (designationComboBox.getValue().equals(a.getDesignantion())){
+                requestTableView.getItems().add(a);
+            }
+        }
         
     }
     

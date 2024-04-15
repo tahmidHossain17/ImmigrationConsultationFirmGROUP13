@@ -3,14 +3,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D6EAF8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tahmid_2220557.R_AllowanceRequestController">
    <children>
-      <Label layoutX="332.0" layoutY="25.0" prefHeight="45.0" prefWidth="185.0" style="-fx-background-color: #A3E4D7;" text="  Allowance Request">
+      <Label layoutX="197.0" layoutY="25.0" prefHeight="45.0" prefWidth="185.0" style="-fx-background-color: #A3E4D7;" text="  Allowance Request">
          <font>
             <Font size="19.0" />
          </font>
@@ -23,24 +22,18 @@
       <Label layoutX="24.0" layoutY="158.0" prefHeight="23.0" prefWidth="109.0" text="Allowance Type" />
       <Label layoutX="24.0" layoutY="209.0" prefHeight="23.0" prefWidth="121.0" text="Requested Amount" />
       <TextField fx:id="requestedAmountTextField" layoutX="150.0" layoutY="208.0" />
-      <Button layoutX="424.0" layoutY="261.0" mnemonicParsing="false" onAction="#SubmitRequestOnMouseClick" prefHeight="37.0" prefWidth="149.0" text="Submit Request">
+      <Button layoutX="334.0" layoutY="268.0" mnemonicParsing="false" onAction="#SubmitRequestOnMouseClick" prefHeight="38.0" prefWidth="246.0" text="Submit Request">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button layoutX="478.0" layoutY="335.0" mnemonicParsing="false" onAction="#backOnMouseClick" prefHeight="38.0" prefWidth="102.0" text="Back">
+      <Button layoutX="478.0" layoutY="335.0" mnemonicParsing="false" onAction="#backOnMouseClick" prefHeight="38.0" prefWidth="102.0" text="Logout">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Label fx:id="outputLabel" layoutX="24.0" layoutY="14.0" prefHeight="100.0" prefWidth="261.0" style="-fx-background-color: #A3E4D7;" />
-      <ComboBox fx:id="choosePayMethodComboBox" layoutX="334.0" layoutY="170.0" prefWidth="150.0" />
-      <Label layoutX="334.0" layoutY="147.0" prefHeight="23.0" prefWidth="169.0" text="Choose Payment Method" />
-      <TextArea fx:id="outputTxtArea" layoutX="33.0" layoutY="254.0" prefHeight="140.0" prefWidth="200.0" />
-      <Button layoutX="275.0" layoutY="316.0" mnemonicParsing="false" onAction="#ShowRequestOnMouseClick" prefHeight="37.0" prefWidth="149.0" text="Show Request">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Button>
+      <ComboBox fx:id="choosePayMethodComboBox" layoutX="478.0" layoutY="169.0" prefHeight="25.0" prefWidth="102.0" />
+      <Label fx:id="outputLabel" layoutX="45.0" layoutY="254.0" prefHeight="78.0" prefWidth="226.0" style="-fx-background-color: #A3E4D7;" />
+      <Label layoutX="313.0" layoutY="171.0" prefHeight="23.0" prefWidth="169.0" text="Choose Payment Method" />
    </children>
 </AnchorPane>
