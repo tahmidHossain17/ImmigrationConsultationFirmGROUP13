@@ -77,5 +77,9 @@ public class ComplaintsController implements Initializable {
 //    private void resolvedButtonOnMouseClick(ActionEvent event) {
 //        
     }
+
+    @FXML
+    private void resolvedButtonOnMouseClick(ActionEvent event) {
+    }
    
 }

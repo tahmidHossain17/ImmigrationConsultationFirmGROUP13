@@ -85,7 +85,6 @@ public class ReceptionistDashboardController implements Initializable {
         stage.show();
     }
 
-    @FXML
     private void fillupClientProfileOnMouseClick(ActionEvent event) throws IOException {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Balancesheet.fxml"));
         Parent parent = fxmlLoader.load();
@@ -100,10 +99,19 @@ public class ReceptionistDashboardController implements Initializable {
         stage.show();
     }
 
-    @FXML
-    private void appointmentScheduleRecordOnMouseClick(ActionEvent event) {
-        
-    }
+//    private void appointmentScheduleRecordOnMouseClick(ActionEvent event)throws IOException {
+//                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FixAppointment.fxml"));
+//        Parent parent = fxmlLoader.load();
+//
+//    
+//        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+//        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+//
+//        Stage stage = new Stage();
+//  
+//        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+//        stage.show();
+//    }
 
     @FXML
     private void generatePaySlipOnMouseClick(ActionEvent event) throws IOException {
@@ -167,6 +175,36 @@ public class ReceptionistDashboardController implements Initializable {
         stage.setScene(new Scene(parent, prefWidth, prefHeight));
         stage.show();
         
+    }
+
+    @FXML
+    private void appointmentRecordOnMouseClick(ActionEvent event) throws IOException {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AppointmentRecord.fxml"));
+        Parent parent = fxmlLoader.load();
+
+    
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+  
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();
+    }
+
+    @FXML
+    private void fixAppointmentOnMouseClick(ActionEvent event) throws IOException {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FixAppointment.fxml"));
+        Parent parent = fxmlLoader.load();
+
+    
+        double prefHeight = parent.prefHeight(USE_COMPUTED_SIZE);
+        double prefWidth = parent.prefWidth(USE_COMPUTED_SIZE);
+
+        Stage stage = new Stage();
+  
+        stage.setScene(new Scene(parent, prefWidth, prefHeight));
+        stage.show();
     }
 
     

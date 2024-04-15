@@ -63,18 +63,29 @@ public class BalancesheetController implements Initializable {
 
     @FXML
     private void generateBalanceSheetOnMouseClick(ActionEvent event) throws IOException {
-        Parent backButton= FXMLLoader.load(getClass().getResource("BalanceSheetOutput.fxml"));
-        Scene scene1=new Scene(backButton);
+ FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("BalanceSheetOutput.fxml"));
+        Parent personViewParent = loader.load();
+
+        //Parent personViewParent = FXMLLoader.load(getClass().getResource("FXMLScene2.fxml"));
+        Scene personViewScene = new Scene(personViewParent);
         
-        Stage s=new Stage();
-        s.setScene(scene1);
-        s.show();
+        //access the controller
+        BalanceSheetOutputController controller = loader.getController();
+        //ersonViewSceneController controller = new PersonViewSceneController();
+//        controller.initData(tableView.getSelectionModel().getSelectedItem());
+         controller.datapass(assetTextField.getText(), liabilitiesTextField.getText(), ownerEquityTextField.getText(), monthComboBox.getValue());
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
-        
-        
-        
-        
+        window.setScene(personViewScene);
+        window.show();
     }
+
+        
+        
+        
+        
+   
 
     @FXML
     private void saveOnMouseClick(ActionEvent event) {

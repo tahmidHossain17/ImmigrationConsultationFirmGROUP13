@@ -71,6 +71,7 @@ public class R_PayslipofClientController implements Initializable {
     
     
     Paymentslip slip;
+    DummyPayment dslip;
 
     /**
      * Initializes the controller class.
@@ -80,6 +81,7 @@ public class R_PayslipofClientController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
         slip =new Paymentslip();
+        dslip=new DummyPayment();
         // TODO
     }    
 
@@ -88,13 +90,20 @@ private void saveRecordOnMouseClick(ActionEvent event) {
     FileOutputStream fos = null;
     ObjectOutputStream oos = null;
     File f = null;
-
+ 
     slip = new Paymentslip(nameTextField.getText(), phoneTextField.getText(), 
                            Integer.parseInt(amountTextFIeld.getText()), 
                            Integer.parseInt(recievedAmountTextField.getText()), 
-                           Integer.parseInt(discountTextField.getText()), 
-                           slip.getDueAmount(), dateLocalDate.getValue());
-    System.out.println(slip);
+                           Integer.parseInt(discountTextField.getText())
+                           , dateLocalDate.getValue());
+    
+    dslip=new DummyPayment(slip.getDueAmount(),nameTextField.getText(), phoneTextField.getText(), 
+                           Integer.parseInt(amountTextFIeld.getText()), 
+                           Integer.parseInt(recievedAmountTextField.getText()), 
+                           Integer.parseInt(discountTextField.getText())
+                           , dateLocalDate.getValue());
+    System.out.println(dslip);
+     System.out.println(slip.getDueAmount());
 
     try {
         f = new File("paymentRecord.bin");
@@ -107,7 +116,7 @@ private void saveRecordOnMouseClick(ActionEvent event) {
             oos = new ObjectOutputStream(fos);
         }
 
-        oos.writeObject(slip); // Serialize only the Paymentslip object
+        oos.writeObject(dslip); // Serialize only the Paymentslip object
         System.out.println("Written successful");
 
         dueLabel.setText("Amount Due is " + Float.toString(slip.getDueAmount()) + " Taka");

@@ -1,12 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
+
 package Komol;
 
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,11 +20,7 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Komol
- */
+
 public class appoinment_scehuduleController implements Initializable {
 
     @FXML
@@ -40,20 +38,28 @@ public class appoinment_scehuduleController implements Initializable {
 
     @FXML
     private void loadbuttononclick(ActionEvent event) {
-      String selectedFileName = null;
-        if ( combobox.getValue() == "Appointment"){
-            selectedFileName = "Legal Advisor Appointment.bin";
-        }
+      File f = null;
+        FileOutputStream fos = null;
+        DataOutputStream dos = null;
         
-//        List<Object> objects = Lawyer.readObjectsFromFile(selectedFileName);
-//        StringBuilder contentBuilder = new StringBuilder();
-//        
-//        for (Object obj : objects) {
-//            if (obj instanceof Appointment) {
-//                contentBuilder.append(((Appointment) obj).toString()).append("\n");
-//            }
-//        }
-//           textarea.setText(contentBuilder.toString());
+        try {
+            f = new File("notification.bin");
+            if(f.exists()) fos = new FileOutputStream(f,true);
+            else fos = new FileOutputStream(f);
+                 dos = new DataOutputStream(fos);
+            
+            dos.writeUTF(combobox.getValue());
+            dos.writeUTF(textarea.getText());
+
+        } catch (IOException ex) {
+            Logger.getLogger(appoinment_scehuduleController.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if(dos != null) dos.close();
+            } catch (IOException ex) {
+                Logger.getLogger(appoinment_scehuduleController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
     
 

@@ -32,7 +32,7 @@ public class LoginController implements Initializable {
     private Button login;
     @FXML
     private Button signupButton;
-
+    
     /**
      * Initializes the controller class.
      */

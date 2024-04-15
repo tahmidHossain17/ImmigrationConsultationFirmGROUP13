@@ -6,23 +6,23 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FCF3CF;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Tahmid_2220557.FinancialReport_ChartController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FCF3CF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tahmid_2220557.FinancialReport_ChartController">
    <children>
       <Label layoutX="177.0" layoutY="43.0" prefHeight="43.0" prefWidth="195.0" style="-fx-background-color: #AED6F1;" text="   Financial Report">
          <font>
             <Font name="System Bold Italic" size="21.0" />
          </font>
       </Label>
-      <BarChart layoutX="-8.0" layoutY="171.0" prefHeight="240.0" prefWidth="576.0">
+      <BarChart fx:id="barChart" layoutX="12.0" layoutY="171.0" prefHeight="240.0" prefWidth="576.0" title="Profit Comparison">
         <xAxis>
-          <CategoryAxis side="BOTTOM" />
+          <CategoryAxis label="Month" side="BOTTOM" fx:id="xaxis" />
         </xAxis>
         <yAxis>
-          <NumberAxis side="LEFT" />
+          <NumberAxis fx:id="yaxis" label="Net" side="LEFT" />
         </yAxis>
       </BarChart>
       <Label layoutX="41.0" layoutY="103.0" prefHeight="17.0" prefWidth="99.0" style="-fx-background-color: #D4EFDF;" text="Select month">
@@ -30,15 +30,15 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ComboBox layoutX="150.0" layoutY="99.0" prefWidth="150.0" />
-      <Label layoutX="309.0" layoutY="102.0" prefHeight="17.0" prefWidth="99.0" style="-fx-background-color: #D4EFDF;" text="Select Year">
+      <ComboBox fx:id="monthComboBox" layoutX="150.0" layoutY="99.0" prefWidth="150.0" />
+      <Label layoutX="309.0" layoutY="102.0" prefHeight="17.0" prefWidth="99.0" style="-fx-background-color: #D4EFDF;" text="Net Profit">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ComboBox layoutX="418.0" layoutY="98.0" prefWidth="150.0" />
-      <Button layoutX="79.0" layoutY="146.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="161.0" text="Show Chart" />
-      <Button layoutX="266.0" layoutY="146.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="161.0" text="Save as PDF" />
-      <Button layoutX="469.0" layoutY="146.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Back" />
+      <Button layoutX="83.0" layoutY="134.0" mnemonicParsing="false" onAction="#showChartOnMouseClick" prefHeight="25.0" prefWidth="161.0" text="Show Chart" />
+      <Button layoutX="334.0" layoutY="134.0" mnemonicParsing="false" onAction="#saveButtonOnMouseClick" prefHeight="25.0" prefWidth="99.0" text="Save " />
+      <TextField fx:id="profitTextField" layoutX="419.0" layoutY="99.0" />
+      <Button layoutX="469.0" layoutY="134.0" mnemonicParsing="false" onAction="#backButtonOnMouseClick" prefHeight="25.0" prefWidth="99.0" text="Back" />
    </children>
 </AnchorPane>
