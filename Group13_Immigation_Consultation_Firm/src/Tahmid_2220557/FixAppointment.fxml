@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B0C4DE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tahmid_2220557.FixAppointmentController">
+   <children>
+      <Label layoutX="137.0" layoutY="14.0" prefHeight="66.0" prefWidth="326.0" style="-fx-background-color: #F0FFF0;" text="   Fix Appointment">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="124.0" prefHeight="20.0" prefWidth="64.0" style="-fx-background-color: #F0FFF0;" text="Name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTextField" layoutX="125.0" layoutY="124.0" />
+      <Label layoutX="37.0" layoutY="175.0" prefHeight="20.0" prefWidth="64.0" style="-fx-background-color: #F0FFF0;" text="Date:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="219.0" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #F0FFF0;" text="Time Slot:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="timeSlotCombobox" layoutX="137.0" layoutY="219.0" prefWidth="150.0" />
+      <DatePicker fx:id="dateDatePicker" layoutX="113.0" layoutY="175.0" />
+      <Button layoutX="346.0" layoutY="124.0" mnemonicParsing="false" onAction="#submitButtonOnMouseClick" prefHeight="58.0" prefWidth="193.0" text="Submit">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Button>
+      <Button layoutX="411.0" layoutY="317.0" mnemonicParsing="false" onAction="#backButtonOnMouseClick" prefHeight="39.0" prefWidth="114.0" text="Back" />
+      <Label layoutX="37.0" layoutY="254.0" prefHeight="20.0" prefWidth="64.0" style="-fx-background-color: #F0FFF0;" text="Phone">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phoneTextField" layoutX="113.0" layoutY="254.0" />
+   </children>
+</AnchorPane>

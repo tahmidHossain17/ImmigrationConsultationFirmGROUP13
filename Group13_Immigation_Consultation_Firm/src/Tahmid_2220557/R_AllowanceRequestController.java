@@ -15,11 +15,17 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -43,8 +49,8 @@ public class R_AllowanceRequestController implements Initializable {
 
     AllowanceRequest allw;
     ArrayList<AllowanceRequest> rqstLst;
-    @FXML
     private TextArea outputTxtArea;
+    Stage sg;
 
     /**
      * Initializes the controller class.
@@ -57,7 +63,13 @@ public class R_AllowanceRequestController implements Initializable {
         choosePayMethodComboBox.getItems().addAll("Bkash", "Nagad", "Rocket", "Bank");
         rqstLst = new ArrayList();
     }
-
+      private void showNotifyAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+          }
     @FXML
     private void SubmitRequestOnMouseClick(ActionEvent event) {
         allw = new AllowanceRequest(nameTextField.getText(), allowanceTypeComboBox.getValue(), designationComboBox.getValue(), choosePayMethodComboBox.getValue(), Integer.parseInt(requestedAmountTextField.getText()));
@@ -79,6 +91,7 @@ public class R_AllowanceRequestController implements Initializable {
             oos.writeObject(allw);
             System.out.println("write object sucessfull ");
             outputLabel.setText("Your Request Has Been Submitted");
+            showNotifyAlert("Notification", "Request Submitted.Thank You!");
             oos.close();
 
         } catch (IOException ex) {
@@ -88,7 +101,6 @@ public class R_AllowanceRequestController implements Initializable {
     }
 
 
-    @FXML
     private void ShowRequestOnMouseClick(ActionEvent event) {
     
 
@@ -131,7 +143,16 @@ public class R_AllowanceRequestController implements Initializable {
 }
 
     @FXML
-    private void backOnMouseClick(ActionEvent event) {
+    private void backOnMouseClick(ActionEvent event) throws IOException {
+        Parent backButton= FXMLLoader.load(getClass().getResource("/mainPKG/Login.fxml"));
+        Scene scene1=new Scene(backButton);
+        
+      
+        
+        sg=(Stage)((Node)event.getSource()).getScene().getWindow();
+        
+        sg.setScene(scene1);
+        sg.show();
     }
 
 }

@@ -1,0 +1,35 @@
+        FileOutputStream fos=null;
+        ObjectOutputStream oos=null;
+        
+        File f=null;
+        
+        slip=new Paymentslip(nameTextField.getText(),phoneTextField.getText(),Integer.parseInt(amountTextFIeld.getText()),Integer.parseInt(recievedAmountTextField.getText()),Integer.parseInt(discountTextField.getText()),slip.getDueAmount(),dateLocalDate.getValue());
+        
+        try{
+            
+            f=new File("paymentRecord.bin");
+            
+            if (f.exists()){
+                fos= new FileOutputStream(f,true);
+                oos=new AppendableObjectOutputStream(fos);
+                
+            }
+            else{
+                fos=new FileOutputStream(f);
+                oos=new ObjectOutputStream(fos);
+            
+            }
+            
+            oos.writeObject(oos);
+            System.out.println("Written succesfull");
+            
+            
+        
+            oos.close();
+        
+        
+        }
+        catch(Exception ex){}
+        
+        
+        
