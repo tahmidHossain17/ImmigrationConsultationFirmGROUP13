@@ -9,7 +9,6 @@
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Komol.UpdatetermsandpolicyfeedbackController">
    <children>
       <Button layoutX="509.0" layoutY="355.0" mnemonicParsing="false" onAction="#logoutbuttononclick" text="logout" />
-      <Button layoutX="382.0" layoutY="355.0" mnemonicParsing="false" onAction="#loadbuttononclick" prefHeight="31.0" prefWidth="79.0" text="Update" />
       <Button layoutX="25.0" layoutY="355.0" mnemonicParsing="false" onAction="#backbuttononclick" text="Back" />
       <Label layoutX="4.0" layoutY="22.0" prefHeight="39.0" prefWidth="593.0" text="Update Terms and Policy of the company for everyone using this application: " textFill="#ae0a0a">
          <font>
