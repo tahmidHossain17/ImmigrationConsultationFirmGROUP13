@@ -71,7 +71,7 @@ public class ITOfficerController implements Initializable {
 
     @FXML
     private void feedbackButtonMouseOnClick(ActionEvent event) {
-        loadUi("Feedback & Suggestion");
+        loadUi("Feedback and Suggestion_1");
     }
 
     @FXML

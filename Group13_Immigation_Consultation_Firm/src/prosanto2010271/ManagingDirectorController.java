@@ -74,7 +74,7 @@ public class ManagingDirectorController implements Initializable {
 
     @FXML
     private void feedbackButtonOnMouseClick(ActionEvent event) {
-        loadUi("Feedback & Suggestion_1");
+        loadUi("Feedback and Suggestion_1");
     }
 
     @FXML
@@ -84,7 +84,7 @@ public class ManagingDirectorController implements Initializable {
 
     @FXML
     private void allowanceButtonOnMouseClick(ActionEvent event) {
-        loadUi("Allowance approval");
+        loadUi("/Tahmid_2220557/AllowanceRequestRecord");
     }
 
     @FXML

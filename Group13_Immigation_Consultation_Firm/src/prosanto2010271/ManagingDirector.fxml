@@ -81,7 +81,7 @@
       </ButtonBar>
    </bottom>
    <top>
-      <Label prefHeight="45.0" prefWidth="222.0" text="Managing Director" BorderPane.alignment="CENTER">
+      <Label prefHeight="61.0" prefWidth="222.0" text="Managing Director" BorderPane.alignment="CENTER">
          <font>
             <Font size="23.0" />
          </font>
