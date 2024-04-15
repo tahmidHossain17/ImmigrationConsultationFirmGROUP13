@@ -13,8 +13,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -96,7 +99,18 @@ public class ManagingDirectorController implements Initializable {
 
     @FXML
     private void termsAndPolicyButtonOnMouseClick(ActionEvent event) {
-        loadUi("MD_Terms and Policy");
+        loadUi("/Tahmid_2220557/TermsAndPolicy");
+    }
+
+    @FXML
+    private void logOutButtonOnMouseClick(ActionEvent event) throws IOException{
+        Parent loginParent = FXMLLoader.load(getClass().getResource("/mainPKG/Login.fxml"));
+      
+        Scene scene1 = new Scene(loginParent);
+        
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene1);
+        window.show();
     }
     
 }
